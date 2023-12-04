@@ -1,6 +1,9 @@
 # userstyles
 Collection of web styling CSS for use with **Stylus** or similar browser plugin. (Not Stylish)
 
+Description to styles from: https://userstyles.world/user/papo  
+Read below in GIT section why are they not here. 
+
 The main problem with _styles_ is, they tend to stop working over time. This is because the site they are made for does change
 and the maintainer does not have time to keep updating the style.  
 
