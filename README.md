@@ -12,6 +12,13 @@ This way I can keep up with fixes to all my _styles_.
 I use these _styles_ myself since 2017, so there is some warranty of continuity.  
 I have tens of _styles_ and plan to share majority of them.  
 
+### ADs
+A preview image of a Style does not show ADs. But they are still on the site.  
+These are color styling Styles.  
+We shouldn't mix-in multiple features into one Style.  
+Yes, I do use another gimics to not just hide ADs, but useless content too, like from Outbrain.  
+But as these are crutial for a site support, I will not help or force disabling ADs by mixing them with a Style.
+
 ### Features
 Dark _Styles_ I use for news media and similar sites have these common features:  
 No bright colors. Easy on eyes. No white background, bars or blocks in and around main article.  
