@@ -47,6 +47,12 @@ Advanced users could also override variables in :root section of my _styles_, to
 and define just the :root section only with rules you want to override. Then use **Actions > Style Injection Order** in Stylus plugin Options, to place your _style_ above mine.
 When site changes and I'll update my _style_, your override rules will still work and you don't have to do anything to keep the site as you like it.  
 
+### Reporting problems
+There might be unstyled elements, as I have various site customizing gadgets. Not just AD blocker.  
+I try to disable them sporadicaly to check how the site would look for others. But not always and not thoroughly.  
+If you see an element which is particularly intrusive by its brightness, please file an Issue, make a screenshot and add a description.  
+If you want, you can make a fix yourself and push a merge. I'll accept, but later will probably edit your edit anyway. So expect that in advance and don't be upset.  
+
 ### Stylish boycott
 I plan to change this common part, from _USO_ pre-processor to _default_ or _stylus_, to intentionally break compatibility with _Stylish_ plugin.  
 Stylish is evil. Spying on users, sending all history, even confidential data to analytics site.  
