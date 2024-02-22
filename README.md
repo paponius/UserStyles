@@ -1,5 +1,5 @@
 # userstyles
-Collection of web styling CSS for use with **Stylus** or similar browser plugin. (Not Stylish)
+Collection of web styling CSS for use with **Stylus** or similar browser plugin. ([Licence is not Stylish compatible](https://github.com/paponius/userstyles/#stylish-boycott))
 
 Description to styles from: https://userstyles.world/user/papo  
 Read below in GIT section why are they not here. 
@@ -58,6 +58,8 @@ I plan to change this common part, from _USO_ pre-processor to _default_ or _sty
 Stylish is evil. Spying on users, sending all history, even confidential data to analytics site.  
 Breaking rules of content writers and Extension Stores. It should be banned. I will not support it further with my _styles_.  
 If you use **Stylish**, change to **Stylus**, you can keep all styles you have and use more sources for even more _styles_.  
+Also, the licence of my Styles is not compatible with Stylus plugin. You can't use it legaly in Stylish plugin (while OK in other, like Stylus).  
+It is because I use non-commercial licence, CC BY-NC-SA 4.0, and Stylus is making money on exploiting its users and misusing user created content.  
 
 ### GIT
 My styles are not here in git now.  
