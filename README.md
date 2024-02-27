@@ -1,9 +1,13 @@
+<!-- tesing links in md files  
+[Will reload the page but will open md without File tree and jumps to anchor OK](https://github.com/paponius/userstyles/#stylish-boycott)
+There could be slash before hash: /userstyles/#stylish-boycott
+[this will reload the md file and show File tree](README.md#stylish-boycott)  
+[without reload](#stylish-boycott)  
+-->
+
 # userstyles
-Collection of web styling CSS for use with **Stylus** or similar browser plugin. ([Licence is not Stylish compatible](https://github.com/paponius/userstyles/#stylish-boycott))  
-[test link1](README.md#stylish-boycott)  
-[test link2](#stylish-boycott)  
-([test link3](https://github.com/paponius/userstyles#stylish-boycott))
-Style files are not located here in GIT, [because of technical limitation.](https://github.com/paponius/userstyles/blob/main/README.md#git)  
+Collection of web styling CSS for use with **Stylus** or similar browser plugin. ([Licence is not Stylish compatible](#stylish-boycott))  
+Style files are not located here in GIT, [because of technical limitation.](#git)  
 They are now only in USw repository. https://userstyles.world/user/papo  
 
 Description of some of my Styles:  
