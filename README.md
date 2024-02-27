@@ -1,8 +1,13 @@
 # userstyles
-Collection of web styling CSS for use with **Stylus** or similar browser plugin. ([Licence is not Stylish compatible](https://github.com/paponius/userstyles/#stylish-boycott))
+Collection of web styling CSS for use with **Stylus** or similar browser plugin. ([Licence is not Stylish compatible](https://github.com/paponius/userstyles/#stylish-boycott))  
+[test link1](README.md#stylish-boycott)  
+[test link2](#stylish-boycott)  
+([test link3](https://github.com/paponius/userstyles#stylish-boycott))
+Style files are not located here in GIT, [because of technical limitation.](https://github.com/paponius/userstyles/blob/main/README.md#git)  
+They are now only in USw repository. https://userstyles.world/user/papo  
 
-Description to styles from: https://userstyles.world/user/papo  
-Read below in GIT section why are they not here. 
+Description of some of my Styles:  
+[BBC](Dark%20BBC/description.md)  
 
 The main problem with _styles_ is, they tend to stop working over time. This is because the site they are made for does change
 and the maintainer does not have time to keep updating the style.  
@@ -16,8 +21,8 @@ I have tens of _styles_ and plan to share majority of them.
 A preview image of a Style does not show ADs. But they are still on the site.  
 These are color styling Styles.  
 We shouldn't mix-in multiple features into one Style.  
-Yes, I do use another gimics to not just hide ADs, but useless content too, like from Outbrain.  
-But as these are crutial for a site support, I will not help or force disabling ADs by mixing them with a Style.
+Yes, I do use another gimmicks to not just hide ADs, but useless content too, like from Outbrain.  
+But as these are crucial for a site support, I will not help or force disabling ADs by mixing them with a Style.
 
 ### Features
 Dark _Styles_ I use for news media and similar sites have these common features:  
@@ -26,6 +31,10 @@ High contrast. No dark text on dark background as many _styles_ do, but bright w
 A special color for _visited_ links. Like good old web does by default, so you know what you've already read when another article is referenced in an article.  
 Main colors can be changed on all styles in _Configure_ of the _style_.  
 Sometimes the header is restyled. Specially if the original is using bright colors.  
+#### Resolution
+How Styles perform in lower resolutions is not tested for now.  
+But there is a plan to support lower widths. Specially if Stylus will be made available in Firefox mobile, or Chrome will allow plugins in mobile browser.  
+For now, if it's obvious from original site's CSS that a rule which is being overrid applies only to certain resolution, I try to keep the overridden the same way.
 
 ### Minus
 The style might not always look very fancy.  
@@ -49,7 +58,7 @@ When site changes and I'll update my _style_, your override rules will still wor
 
 ### Reporting problems
 There might be unstyled elements, as I have various site customizing gadgets. Not just AD blocker.  
-I try to disable them sporadicaly to check how the site would look for others. But not always and not thoroughly.  
+I try to disable them sporadically to check how the site would look for others. But not always and not thoroughly.  
 If you see an element which is particularly intrusive by its brightness, please file an Issue, make a screenshot and add a description.  
 If you want, you can make a fix yourself and push a merge. I'll accept, but later will probably edit your edit anyway. So expect that in advance and don't be upset.  
 
@@ -59,7 +68,7 @@ Stylish is evil. Spying on users, sending all history, even confidential data to
 Breaking rules of content writers and Extension Stores. It should be banned. I will not support it further with my _styles_.  
 If you use **Stylish**, change to **Stylus**, you can keep all styles you have and use more sources for even more _styles_.  
 Also, the licence of my Styles is not compatible with Stylus plugin. You can't use it legaly in Stylish plugin (while OK in other, like Stylus).  
-It is because I use non-commercial licence, CC BY-NC-SA 4.0, and Stylus is making money on exploiting its users and misusing user created content.  
+It is because I use non-commercial licence, CC BY-NC-SA 4.0, and Stylish is making money on exploiting its users and misusing user created content commercially.  
 
 ### GIT
 My styles are not here in git now.  
