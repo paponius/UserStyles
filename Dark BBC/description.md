@@ -1,4 +1,8 @@
 ### State
+Update 24-03: Fixed back to 80% after BBC web update. I forgot BBC does change class names periodically.
+
+Added color presets which work nice together, try by changing Background to Dark Charcoal and Text Background to Rich Black in Options.
+
 Site should be 100% Readable and 99% Styled.
 Please report unreadable text on any page.  
 Some white blocks on some extra pages are left unstyled. e.g. https://www.bbc.co.uk/contact, https://www.bbc.co.uk/iplayer/guidance
