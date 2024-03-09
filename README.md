@@ -1,5 +1,5 @@
 <!-- tesing links in md files
-To not show the File tree, use full github.com paths.
+There seems to be no way to open an md page other than the main readme.md in a view without the File tree.
 To avoid reload, when just jumping anchors, use only "#anchor".
 
 [Will reload the page but will open md without File tree and jumps to anchor OK](https://github.com/paponius/userstyles/#stylish-boycott)
@@ -14,8 +14,7 @@ Style files are not located here in GIT, [because of technical limitation.](#git
 They are now only in USw repository. https://userstyles.world/user/papo  
 
 Description of some of my Styles:  
-[BBC](https://github.com/paponius/userstyles/Dark%20BBC/description.md)  
-[tttt](https://github.com/paponius/userstyles/tree/main/Dark%20BBC/description.md)
+[BBC](Dark%20BBC/description.md)
 
 The main problem with _styles_ is, they tend to stop working over time. This is because the site they are made for does change
 and the maintainer does not have time to keep updating the style.  
