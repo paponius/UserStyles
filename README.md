@@ -1,6 +1,9 @@
-<!-- tesing links in md files  
+<!-- tesing links in md files
+To not show the File tree, use full github.com paths.
+To avoid reload, when just jumping anchors, use only "#anchor".
+
 [Will reload the page but will open md without File tree and jumps to anchor OK](https://github.com/paponius/userstyles/#stylish-boycott)
-There could be slash before hash: /userstyles/#stylish-boycott
+There could be a slash before hash, or not: /userstyles/#stylish-boycott
 [this will reload the md file and show File tree](README.md#stylish-boycott)  
 [without reload](#stylish-boycott)  
 -->
@@ -11,7 +14,7 @@ Style files are not located here in GIT, [because of technical limitation.](#git
 They are now only in USw repository. https://userstyles.world/user/papo  
 
 Description of some of my Styles:  
-[BBC](Dark%20BBC/description.md)  
+[BBC](https://github.com/paponius/userstyles/Dark%20BBC/description.md)  
 
 The main problem with _styles_ is, they tend to stop working over time. This is because the site they are made for does change
 and the maintainer does not have time to keep updating the style.  
