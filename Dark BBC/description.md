@@ -1,5 +1,6 @@
 ### State
 Update 24-03: Fixed back to 80% after BBC web update. I forgot BBC does change class names periodically.
+Update 24-03: Just when I finished fixing the Style, after years of no changes, BBC redesigned and all was lost. Starting again. Now at 10%.
 
 Added color presets which work nice together, try by changing Background to Dark Charcoal and Text Background to Rich Black in Options.
 
