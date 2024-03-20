@@ -9,9 +9,16 @@ There could be a slash before hash, or not: /userstyles/#stylish-boycott
 -->
 
 # userstyles
-Collection of web styling CSS for use with **Stylus** or similar browser plugin. ([Licence is not Stylish compatible](#stylish-boycott))  
-Style files are not located here in GIT, [because of technical limitation.](#git)  
-They are now only in USw repository. https://userstyles.world/user/papo  
+Collection of web styling CSS for use with **Stylus** or similar browser plugin. ([Not Stylish](#stylish-boycott))  
+Style files are not located here in GIT, [because of technical limitations.](#git)  
+They are for now only in USw repository. https://userstyles.world/user/papo  
+
+Dark Styles I create are made for the purpose of comfortable reading.  
+There is a notable difference with dark Styles made for color-haters. Or for the false feeling of a cleanliness.  
+I don't remove color distinguishable elements. On the contrary I add special colors for links, visited links, separate colors for caption/sub-caption...  
+The practice of using a pattern for page background and text background, instead of a solid color has an important purpose,  
+it does not "hypnotize" while reading. Helps to stay on the line and in focus. The effects of solid background and sharp contrast of a text on people reading it are a proofed concept.  
+There is a choice to change these backgrounds to other patterns or colors. There is a preset for Dark charcoal and Rich black. Changing Background and Text Background in Options of my Styles to these backgrounds respectively, will work very nicely together. But the advantage of non-hypnotizing background would be lost.  
 
 Description of some of my Styles:  
 [BBC](Dark%20BBC/description.md)
