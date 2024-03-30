@@ -21,7 +21,8 @@ it does not "hypnotize" while reading. Helps to stay on the line and in focus. T
 There is a choice to change these backgrounds to other patterns or colors. There is a preset for Dark charcoal and Rich black. Changing Background and Text Background in Options of my Styles to these backgrounds respectively, will work very nicely together. But the advantage of non-hypnotizing background would be lost.  
 
 Description of some of my Styles:  
-[BBC](Dark%20BBC/description.md)
+[Dark BBC](Dark%20BBC/description.md)
+[Dark Wikipedia](Dark%20Wikipedia/description.md)
 
 The main problem with _styles_ is, they tend to stop working over time. This is because the site they are made for does change
 and the maintainer does not have time to keep updating the style.  
