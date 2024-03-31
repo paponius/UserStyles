@@ -33,11 +33,13 @@ I use these _styles_ myself since 2017, so there is some warranty of continuity.
 I have tens of _styles_ and plan to share majority of them.  
 
 ### ADs
-A preview image of a Style does not show ADs. But they are still on the site.  
-These are color styling Styles.  
-We shouldn't mix-in multiple features into one Style.  
-Yes, I do use another gimmicks to not just hide ADs, but useless content too, like from Outbrain.  
-But as these are crucial for a site support, I will not help or force disabling ADs by mixing them with a Style.
+A preview image of my Styles do not show ADs. But they are not removed.  
+I follow a practice to not combine everything into one Userstyle.  
+In my set, there are Dark Styles and DeAnnoy styles. I don't do AD removing Styles. ADs are crucial for a site support, I don't want to support AD removing.  
+I do not use ADs, so the screenshots I make do not show them. I consider external content, like "(i)Relevant" articles to be ADs too, like Outbrain, Dianomi.  
+ADs are running in an iframe or a shadow DOM. They do load randomly and each is using its own structure. They are quite impossible to style.  
+But I do change the background of ADs containers in some places. This might cause a text on some ADs to not be readable.
+
 
 ### Features
 Dark _Styles_ I use for news media and similar sites have these common features:  
