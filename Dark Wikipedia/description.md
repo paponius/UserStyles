@@ -1,10 +1,15 @@
-# Limitation
-Wikipedia pages are different from a web site using a common style scheme.  
-It's quite difficult to modify colors and keep the shade variety for various elements on a page.  
-Often wiki pages use a template. In a template the style is expectable and so pages which uses them can be styled quite safely.  
+# Collaboration
+A help is appreciated, but it must follow the existing scheme.  
+This Userstyle is very different from those most common out there.  
+
+# Wikipedia Limitation
+Wikipedia differs from a web site, as it's, from technical perspective, basicaly a web hosting service.  
+Every page is made by different authors and they are allowed to use any colors they desire.  
+This is why there must be a compromise between total dark customization and preservation of shade and color variety for various elements on a page.  
+
+Often wiki pages use a template. In a template the style is more predictable and so pages which use them can be styled safely.  
 But there are dozens or hundrets of templates, and they can be edited too.  
-A template can be very different for different language mutation.  
-And then there are pages which do not use a template, but define a style inline. (in wiki source) Those are quite impossible to style.  
+Moreover, a template can be very different for different language mutation.  
 
 So a style for Wikipedia, using only CSS will never be perfect.  
 Most styles, or all of them, will just change a table heading and data entry to certain color.  
