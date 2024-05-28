@@ -1,5 +1,5 @@
 # SubStyle
-This is a concept. It is not implemented in Stylus. Maybe authors will like this idea and add it to a new version. Maybe there will be another styles manager which will support it. Maybe I'll make one. For now, jump to (#Workaround).
+This is a concept. It is not implemented in Stylus. Maybe authors will like this idea and add it to a new version. Maybe there will be another styles manager which will support it. Maybe I'll make one. For now, jump to [Workaround](#Workaround).
 
 SubStyle is an user Style dependent on another style.
 
