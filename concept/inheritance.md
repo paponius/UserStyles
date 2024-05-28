@@ -5,21 +5,25 @@ SubStyle is an user Style dependent on another style.
 
 It is used to additionally modify another Style, without editing it.
 
-To use such Style, a dependency, the super-Style, must also be installed and enabled.
-
 ## Why use a SubStyle
 
 Editing a Style would disable automatic updates.
-When modding a Style using another Style, the original Style will update if the target site changes
-and its authors will fix this super-Style. Chances are the subStyle would still work, or at least not break the site to an unreadable state.
+
+Authors of the SubUserStyle can limit the workload of keeping their's Style up to date by only managing their part of the script.
+
+When a site for which the UserStlye is made will change and brake the UserStyle, author of the SubUserStyle can just wait for the authors of the SuperUserStyle to fix it.
+
+If this idea was implemented and used, there only need to be one SuperUserStyle for each web site to color style it to any look. It will define all stylable elements using style variables. SubUserStyle will change values of those variables, optionally add more features.
 
 It's more sustainable. Easier to maintain many Styles in a working order.
 
 ## Workaround
+As there is no style manager supporting this, manual steps need to be done.  
+To use a SubUserStyle, a dependency, the super-Style, must also be installed and enabled.
 
 ### Re-sort
 
-Sometimes a subStyle overriding rules from super-Style needs to be applied after the super-Style.
+Sometimes a SubStyle overriding rules from super-Style needs to be applied after the super-Style.
 Go to:
 
 Manage > (Style injection order) button right of the Options button >
