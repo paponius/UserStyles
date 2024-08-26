@@ -11,7 +11,7 @@ There could be a slash before hash, or not: /userstyles/#stylish-boycott
 # userstyles
 Collection of web styling CSS for use with **Stylus** or similar browser plugin. ([Not Stylish](#stylish-boycott))  
 Style files are not located here in GIT, [because of technical limitations.](#git)  
-They are for now only in USw repository. https://userstyles.world/user/papo  
+This GIT repo serves as description and feedback/issue tracker only,  Around They are for now only in USw repository. https://userstyles.world/user/papo  
 
 Dark Styles I create are made for the purpose of comfortable reading.  
 There is a notable difference with dark Styles made for color-haters. Or for the false feeling of a cleanliness.  
@@ -88,8 +88,9 @@ Also, the licence of my Styles is not compatible with Stylus plugin. You can't u
 It is because I use non-commercial licence, CC BY-NC-SA 4.0, and Stylish is making money on exploiting its users and misusing user created content commercially.  
 
 ### GIT
-My styles are not here in git now.  
-You can find them in this _Store_: https://userstyles.world/user/papo  
+All styles using this look-alike theme are located 
+Styles using Around 40 indistyles are not here in git now.  
+They are for now only in USw repository: https://userstyles.world/user/papo  
 Use **Issues** here in Github to report a problem.  
 
 If you really really want to fix a _style_, you can commit the whole css file here and I'll manually link it or copy it to USw Store.  
