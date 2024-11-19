@@ -1,4 +1,4 @@
-<!-- tesing links in md files
+<!-- testing links in md files
 There seems to be no way to open an md page other than the main readme.md in a view without the File tree.
 To avoid reload, when just jumping anchors, use only "#anchor".
 
@@ -9,16 +9,25 @@ There could be a slash before hash, or not: /userstyles/#stylish-boycott
 -->
 
 # userstyles
-Collection of web styling CSS for use with **Stylus** or similar browser plugin. ([Not Stylish](#stylish-boycott))  
-Style files are not located here in GIT, [because of technical limitations.](#git)  
-This GIT repo serves as description and feedback/issue tracker only,  Around They are for now only in USw repository. https://userstyles.world/user/papo  
+Collection of UserStyles (US), web styling CSS for use with **Stylus** or similar browser plugin. ([except Stylish](#stylish-boycott))  
+This GIT repo is only used for description and feedback/issue tracker for now, not actual ...user.css files.  
+UserStyle files are in USw repository: https://userstyles.world/user/papo  
+That is because of the [incompatible workflow](#git).  
 
 Dark Styles I create are made for the purpose of comfortable reading.  
-There is a notable difference with dark Styles made for color-haters. Or for the false feeling of a cleanliness.  
-I don't remove color distinguishable elements. On the contrary I add special colors for links, visited links, separate colors for caption/sub-caption...  
+There is a notable difference with dark Styles for color-haters.  
+Color is not removed, or set to the same one, for distinguishable elements. On the contrary, additional special color is used for links, visited links, links to a page section vs. links to another article, separate colors for caption/sub-caption...  
+But, using the UserStyle Options, all important colors can be changed even to the same one, thus giving the color-haters false feeling of cleanliness ;).
+
+There are three types of Background Color used in these US, with default for two of them being a pattern.  
 The practice of using a pattern for page background and text background, instead of a solid color has an important purpose,  
-it does not "hypnotize" while reading. Helps to stay on the line and in focus. The effects of solid background and sharp contrast of a text on people reading it are a proofed concept.  
-There is a choice to change these backgrounds to other patterns or colors. There is a preset for Dark charcoal and Rich black. Changing Background and Text Background in Options of my Styles to these backgrounds respectively, will work very nicely together. But the advantage of non-hypnotizing background would be lost.  
+it does not "hypnotize" while reading. Helps to stay on the line and in focus. The negative effect of solid background and sharp contrast of a text on people reading it are a proofed concept.  
+These background colors can also be changed in Options. A very nice alternative would be to changing colors of background to presets Dark charcoal and Rich black colors in US Options. But the advantage of non-hypnotizing background would be lost.  
+`Background`: color or pattern for page background. Used for empty parts of a web page.  
+`Text background`: color or pattern for background of main text on a web page.  
+Third color is a section background. It's fixed to 30% transparent.
+
+[m] in description of a style from this set means it's also tested for mobile version.
 
 Description of some of my Styles:  
 [Dark BBC](Dark%20BBC/description.md)  
@@ -33,12 +42,16 @@ I use these _styles_ myself since 2017, so there is some warranty of continuity.
 I have tens of _styles_ and plan to share majority of them.  
 
 ### ADs
-A preview image of my Styles do not show ADs. But they are not removed.  
-I follow a practice to not combine everything into one Userstyle.  
-In my set, there are Dark Styles and DeAnnoy styles. I don't do AD removing Styles. ADs are crucial for a site support, I don't want to support AD removing.  
-I do not use ADs, so the screenshots I make do not show them. I consider external content, like "(i)Relevant" articles to be ADs too, like Outbrain, Dianomi.  
-ADs are running in an iframe or a shadow DOM. They do load randomly and each is using its own structure. They are quite impossible to style.  
-But I do change the background of ADs containers in some places. This might cause a text on some ADs to not be readable.
+A preview image of these Styles do not show ADs. But they are not removed by these UserStyles.  
+I don't want to support general AD removing. Also, to follow a practice of not combining multiple features into one,  
+"Dark" styles do change color style, "DeAnnoy" styles do remove or change behavior of certain page elements and, if desired, find and install a style for removing ADs.  
+I do not provide them. Multiple styles for one web site can work together without any measurable overhead.
+
+The exception are some annoying ADs, masking themselves as main page content, leading to other useless pages, or are otherwise intrusive.  
+These ADs are 1, background-colored/bordered by "Dark" styles. 2, can be disabled in "DeAnoy" styles.
+
+These includes 3rd party enhancers with "(i)Relevant" articles, like Outbrain, Dianomi.  
+Moreover, they are mostly embedded in a shadow DOM or an iframe. And that makes them impossible or difficult to style.
 
 
 ### Features
