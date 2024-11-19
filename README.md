@@ -19,17 +19,17 @@ There is a notable difference with dark Styles for color-haters.
 Color is not removed, or set to the same one, for distinguishable elements. On the contrary, additional special color is used for links, visited links, links to a page section vs. links to another article, separate colors for caption/sub-caption...  
 But, using the UserStyle Options, all important colors can be changed even to the same one, thus giving the color-haters false feeling of cleanliness ;).
 
-There are three types of Background Color used in these US, with default for two of them being a pattern.  
-The practice of using a pattern for page background and text background, instead of a solid color has an important purpose,  
-it does not "hypnotize" while reading. Helps to stay on the line and in focus. The negative effect of solid background and sharp contrast of a text on people reading it are a proofed concept.  
+[m] in description of a style from this set means it's also tested for mobile version.
+
+#### Background color
+There are three types of Background Color used in these US, with defaults for two of them being a pattern.  
+The practice of using a pattern for page background and text background, instead of a solid color has an important purpose of not hypnotizing the reader. They do help to stay on the line and in focus. The negative effect of solid background and sharp contrast of a text on people reading it is a proofed concept.  
 These background colors can also be changed in Options. A very nice alternative would be to changing colors of background to presets Dark charcoal and Rich black colors in US Options. But the advantage of non-hypnotizing background would be lost.  
 `Background`: color or pattern for page background. Used for empty parts of a web page.  
 `Text background`: color or pattern for background of main text on a web page.  
 Third color is a section background. It's fixed to 30% transparent.
 
-[m] in description of a style from this set means it's also tested for mobile version.
-
-Description of some of my Styles:  
+#### Description of some of my Styles:  
 [Dark BBC](Dark%20BBC/description.md)  
 [Dark Wikipedia](Dark%20Wikipedia/description.md)
 
