@@ -6,28 +6,57 @@ To avoid reload, when just jumping anchors, use only "#anchor".
 There could be a slash before hash, or not: /userstyles/#stylish-boycott
 [this will reload the md file and show File tree](README.md#stylish-boycott)  
 [without reload](#stylish-boycott)  
--->
+ -->
 
-# userstyles
-Collection of UserStyles (US), web styling CSS for use with **Stylus** or similar browser plugin. ([except Stylish](#stylish-boycott))  
-This GIT repo is only used for description and feedback/issue tracker for now, not actual ...user.css files.  
+# UserStyles
+Collection of UserStyles (US), web styling CSS for use with **Stylus** or similar browser plugins. ([except Stylish](#stylish-boycott))  
+
+Most of these UserStyles are for styling pages with similar structure. A header, hero with headline/main heading and a main article.  
+Usually there are two UserStyles here, one starting with *Dark* and one with *DeAnnoy*.  
+Note, that the look used in a preview is just a default setting. This can very easily be changed using presets in Options.  
+There might be three reasons for changing the most used black on white style of the web.  
+1. "Too much light for my eyes."
+2. "The page looks ugly, it's not clean, uniform."
+3. "The page is hypnotizing me and I can't keep focus on a line."
+Here is an example how Wikipedia would look, for each of these groups, with a change in Options done by just a few clicks.
+<img src="https://github.com/user-attachments/assets/10f476c8-2309-412d-b7ad-7839236d69e4" width="300">
+<img src="https://github.com/user-attachments/assets/947b507b-6e26-4ede-893c-690a5676dfa6" width="300">
+<img src="https://github.com/user-attachments/assets/fd1d7a0e-3dd1-4868-9b59-dd88100301f7" width="300">
+
+And as all styles are using the same CSS variables, a style "to rule them all" can easily be created, which would change the look for all sites I styled using just one setting.  
+
+Despite the customization, the *Dark* theme must stay "dark". e.g. You can change primary text color to black and background color to white, but there usually are other hard coded components and the page will be rendered unreadable.  
+The reason to allow changing of primary/secondary text is to have less contrast characters. But the text color must remain whitish.  
+
+[m] in description of a style from this set means it's also tested and where needed different CSS applied for mobile version, more accurately all kinds of page width. Where the [m] is missing, the result is uncertain.
+
+#### Support
+If you find a broken page, especially one where text can't be seen, let me know.  
+Use [Issue](https://github.com/paponius/UserStyles/issues/new)  
+or [Discussion](https://github.com/paponius/UserStyles/discussions/new/choose)  
+or Discord: @paponius, DM or maybe on [UserStyles user-chat channel](https://discord.gg/KsbaWj8N)  
+
+This GIT repo is only used for description and feedback/issue tracker for now. It does not contain the actual ...user.css files.  
 UserStyle files are in USw repository: https://userstyles.world/user/papo  
 That is because of the [incompatible workflow](#git).  
 
-Dark Styles I create are made for the purpose of comfortable reading.  
-There is a notable difference with dark Styles for color-haters.  
-Color is not removed, or set to the same one, for distinguishable elements. On the contrary, additional special color is used for links, visited links, links to a page section vs. links to another article, separate colors for caption/sub-caption...  
-But, using the UserStyle Options, all important colors can be changed even to the same one, thus giving the color-haters false feeling of cleanliness ;).
-
-[m] in description of a style from this set means it's also tested for mobile version.
+#### Main purpose of these UserStyles
+Dark Styles I create are primarily made for the purpose of comfortable reading and fast orientation.  
+Color of elements is not removed or made uniform, on the contrary.  
+e.g. Links. Special color is used for links to a page section (tags) vs links to a specific article. Color for visited links is added back where the site removes it.  
+Separate colors are used for main heading/headline and sub-heading.  
+Despite that, if someone prefers "clean" mode, these colors can be made uniform.
 
 #### Background color
-There are three types of Background Color used in these US, with defaults for two of them being a pattern.  
+There are three types of Background color/pattern used in these US.  
+1. `Background`: color or pattern. Used for empty parts of a web page.  
+2. `Text background`: color or pattern. Background for the main text of a page. Parts which a visitor spends most time reading.  
+3. Section background: Encloses elements of the same group together.  
+
+First two can be fully customized. To a different pattern, a color, or nothing - transparent.  
+Section background can't be changed, it's mostly fixed to 30% transparency. In some cases a tint of such group can be changed.  
+
 The practice of using a pattern for page background and text background, instead of a solid color has an important purpose of not hypnotizing the reader. They do help to stay on the line and in focus. The negative effect of solid background and sharp contrast of a text on people reading it is a proofed concept.  
-These background colors can also be changed in Options. A very nice alternative would be to changing colors of background to presets Dark charcoal and Rich black colors in US Options. But the advantage of non-hypnotizing background would be lost.  
-`Background`: color or pattern for page background. Used for empty parts of a web page.  
-`Text background`: color or pattern for background of main text on a web page.  
-Third color is a section background. It's fixed to 30% transparent.
 
 #### Description of some of my Styles:  
 [Dark BBC](Dark%20BBC/description.md)  
