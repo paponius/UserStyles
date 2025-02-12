@@ -14,7 +14,7 @@ Collection of UserStyles (US), web styling CSS for use with **Stylus** or simila
 Most of these UserStyles are for styling pages with similar structure. A header, hero with headline/main heading and a main article.  
 Usually there are two UserStyles here, one starting with *Dark* and one with *DeAnnoy*.  
 Note, that the look used in a preview is just a default setting. This can very easily be changed using presets in Options.  
-There might be three reasons for changing the most used black on white style of the web.  
+There might be three reasons for changing the common "black on white" style of the web.  
 1. "Too much light for my eyes."
 2. "The page looks ugly, it's not clean, uniform."
 3. "The page is hypnotizing me and I can't keep focus on a line."
