@@ -17,7 +17,7 @@ Note, that the look used in a preview is just a default setting. This can very e
 There might be three reasons for changing the common "black on white" style of the web.  
 1. "Too much light for my eyes."
 2. "The page looks ugly, it's not clean, uniform."
-3. "The page is hypnotizing me and I can't keep focus on a line."
+3. "The page is hypnotizing me and I can't keep focus on a line."  
 Here is an example how Wikipedia would look, for each of these groups, with a change in Options done by just a few clicks.
 <img src="https://github.com/user-attachments/assets/10f476c8-2309-412d-b7ad-7839236d69e4" width="300">
 <img src="https://github.com/user-attachments/assets/947b507b-6e26-4ede-893c-690a5676dfa6" width="300">
