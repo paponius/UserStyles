@@ -48,6 +48,8 @@ e.g. Links. Special color is used for links to a page section (tags) vs links to
 Separate colors are used for main heading/headline and sub-heading.  
 Despite that, if someone prefers "clean" mode, these colors can be made uniform.
 
+[To share, or not to share. Or why and why not](/description/why.md)
+
 #### Background color
 There are three types of Background color/pattern used in these US.  
 1. `Background`: color or pattern. Used for empty parts of a web page.  
