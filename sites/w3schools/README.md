@@ -9,3 +9,5 @@ Also, I understand that some users like to switch to a Light Mode during a day a
 There was no way out of this, so I scrapped the whole thing and replaced it with version 2.  
 Now Light Mode is as in original and styled is only Dark Mode.  
 w3schools web page mode does not adhere to user preference from system. It is in Light Mode, until you press the mode selector.
+
+### [General description for my UserStyles](https://github.com/paponius/UserStyles/)
