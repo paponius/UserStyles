@@ -34,6 +34,8 @@ Often wiki pages use a template. In a template the style is more predictable and
 But there are still hundreds of templates, and they can be edited and changed too.  
 Moreover, a template can be very different for different languages.  
 
+Some elements do use class names. More are added recently. But for some reason these are localized! This is worse than nothing.
+
 So a style for Wikipedia, using only CSS will never be perfect.  
 Most styles, or all of them, will just change a table heading and data entry to certain color.  
 In this Userstyle, I try to style templates I encounter, keeping a difference in coloring. Colors are lightness-reversed.
