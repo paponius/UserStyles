@@ -11,27 +11,27 @@ There could be a slash before hash, or not: /userstyles/#stylish-boycott
 # UserStyles
 Collection of UserStyles (US), web styling CSS for use with **Stylus** or similar browser plugins. ([except Stylish](#stylish-boycott))  
 
-Most of these UserStyles are for styling pages with similar structure. A header, hero with headline/main heading and a main article.  
-Usually there are two UserStyles here, one starting with *Dark* and one with *DeAnnoy*.  
-Note, that the look used in a preview is just a default setting. This can very easily be changed using presets in Options.  
-There might be three reasons for changing the common "black on white" style of the web.  
-1. "Too much light for my eyes."
-2. "The page looks ugly, it's not clean, uniform."
-3. "The page is hypnotizing me and I can't keep focus on a line."
+Most of UserStyles in this collection are for styling pages with similar structure and comes in two UserStyles per a web site. One starting with *Dark* targets color and format. The other one starts with *DeAnnoy* and does hide, un-stick, or rearrange objects on the site. They work nicely together.
 
-Here is an example how Wikipedia would look, for each of these groups, with a change in Options done by just a few clicks.
-<img src="https://github.com/user-attachments/assets/10f476c8-2309-412d-b7ad-7839236d69e4" width="300">
-<img src="https://github.com/user-attachments/assets/947b507b-6e26-4ede-893c-690a5676dfa6" width="300">
-<img src="https://github.com/user-attachments/assets/fd1d7a0e-3dd1-4868-9b59-dd88100301f7" width="300">
+Note, that the look used in a preview is just a default setting (3). This can very easily be changed using presets in Options.  
+There might be three reasons for a user to seek a change of the usual style of the web page, with black on white text.  
+1. Page is too bright. Hurting the eyes.
+2. Page is not clean, uniform.
+3. The page is hypnotizing and is hard to keep focus while reading."
+
+Here is an example how Wikipedia would look, for each of these points, with a change in Options done by just a few clicks.
+<img src="https://github.com/user-attachments/assets/10f476c8-2309-412d-b7ad-7839236d69e4" width="33%">
+<img src="https://github.com/user-attachments/assets/947b507b-6e26-4ede-893c-690a5676dfa6" width="33%">
+<img src="https://github.com/user-attachments/assets/fd1d7a0e-3dd1-4868-9b59-dd88100301f7" width="33%">
 
 And as all styles are using the same CSS variables, a style "to rule them all" can easily be created, which would change the look for all sites I styled using just one setting.  
 
-Despite the customization, the *Dark* theme must stay "dark". e.g. You can change primary text color to black and background color to white, but there usually are other hard coded components and the page will be rendered unreadable.  
-The reason to allow changing of primary/secondary text is to have less contrast characters. But the text color must remain whitish.  
+Despite the customization, the *Dark* theme must stay "dark". You can change primary text color to black and background color to white, but there usually are other hard coded components and the page will be rendered unreadable.  
+The reason to allow changing of primary/secondary text is to have less contrasted text. But the text color must remain whitish.  
 
-[m] in description of a style from this set means it's also tested and where needed different CSS applied for mobile version, more accurately all kinds of page width. Where the [m] is missing, the result is uncertain.
+[m] in the description of a style from this set means it also covers mobile version of a page, and/or various page width. Without the [m] in the description, the result is uncertain.
 
-#### Support
+### Support
 If you find a broken page, especially one where text can't be seen, let me know.  
 Use [Issue](https://github.com/paponius/UserStyles/issues/new)  
 or [Discussion](https://github.com/paponius/UserStyles/discussions/new/choose)  
@@ -50,6 +50,49 @@ Despite that, if someone prefers "clean" mode, these colors can be made uniform.
 
 [To share, or not to share. Or why and why not.](/description/why.md)
 
+### UserStyle Options
+#### Text Primary
+Text color of the main content. The body of an article page, text of cards, other significant text.
+
+#### Text Secondary
+Less significant text. Something which can be skipped while reading the main content.
+
+#### Text insignificant ("Dark")
+Text repeatedly used on all pages. Something a frequent visitor ignores while reading a page.
+
+#### Headline
+The headline of an Article page. Also a card can have a headline, but only if there is additional text on such card.
+
+#### Headings
+Labels of page sections, also headings within the article.
+
+#### Link color, Visited link color, Link color hover
+Links within an Article content.
+
+#### Text lead
+"lede" of an article. The first, most significant paragraph of an article.
+
+#### Text deck
+"dek" is a more detailed secondary headline of an article.
+
+#### Text byline
+The by-line is mentioning the author/source, date and location.
+
+#### Text breadcrumb
+On various sites, these are also called Tags, Trending, Sections, ...  
+The breadcrumb color is also used on links leading to a breadcrumb. This is handy while reading an article. Link color means there are more details on a specific topic. It leads to a connected article, or external web page. Breadcrumb color on a link means, the linked page only contains articles grouped in the same general topic. This is usually a honey-trap, used to recirculate (recycle) the visitor.
+
+#### Text Primary size, Text Primary line height, Text Primary font
+_Primary_ here means the content of an Article page. It's only a subset of Text Primary (color).  
+Changing the line height will also change the spacing between paragraphs on some sites.
+
+#### Custom Text Primary font
+Only applicable when _Text Primary font_ is set to _Custom_. enter value for ["font-family" property](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family). The default value which can be seen in this Option, is the same as the _Default_ value within the _Text Primary font_ Option.  
+For font names including spaces, use double quotes. This will not load a font. Used font must either already be loaded by the web page, or installed in the Operating system. Fonts present within the _Text Primary font_ Option are basically most of all universally available fonts.
+
+#### Styled Quote
+Optionally present on some UserStyles. The color is service specific. i.e. Blue border for twitter. This might only be visible if browser is set to not allow external content. Otherwise a twitter tweet would be shown in an iframe from twitter.com, ignoring the blue border option.
+
 #### Background color
 There are three types of Background color/pattern used in these US.  
 1. `Background`: color or pattern. Used for empty parts of a web page.  
@@ -58,6 +101,19 @@ There are three types of Background color/pattern used in these US.
 
 First two can be fully customized. To a different pattern, a color, or nothing - transparent.  
 Section background can't be changed, it's mostly fixed to 30% transparency. In some cases a tint of such group can be changed.  
+
+When _Background_, or _Text background_ is set to _Custom_, the value of the `background` property can be entered in _Custom Background_ and/or _Custom Text Background_.  
+[See background property.]([url](https://developer.mozilla.org/en-US/docs/Web/CSS/background))
+
+##### Background image type
+When a background is an image. This Option chooses if the image should be shown just once, or the space should be tiled with repeating patters of the background image.
+
+##### Background image attachment
+When a background is an image (or a pattern made from an image), should the background scroll with the page content, or stay fixed.
+On some (newer) US, for this option if() function is used. This function is today supported only on Chrome. Firefox will ignore this Option.
+
+##### ADs background color
+Frame ADs in a color shade. This makes ADs, specially those trying to mimic an article story stick-out.
 
 The practice of using a pattern for page background and text background, instead of a solid color has an important purpose of not hypnotizing the reader. They do help to stay on the line and in focus. The negative effect of solid background and sharp contrast of a text on people reading it is a proofed concept.  
 
