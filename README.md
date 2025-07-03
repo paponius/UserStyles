@@ -19,7 +19,7 @@ There might be three reasons for a user to seek a change of the usual style of t
 2. Page is not clean, uniform.
 3. The page is hypnotizing and is hard to keep focus while reading."
 
-Here is an example how Wikipedia would look, for each of these points, with a change in Options done by just a few clicks.
+Here is an example how Wikipedia would look, for each of these points, with a change in Options done by just a few clicks.  
 <img src="https://github.com/user-attachments/assets/10f476c8-2309-412d-b7ad-7839236d69e4" width="33%">
 <img src="https://github.com/user-attachments/assets/947b507b-6e26-4ede-893c-690a5676dfa6" width="33%">
 <img src="https://github.com/user-attachments/assets/fd1d7a0e-3dd1-4868-9b59-dd88100301f7" width="33%">
