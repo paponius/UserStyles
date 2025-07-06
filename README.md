@@ -13,6 +13,8 @@ Collection of UserStyles (US), web styling CSS for use with **Stylus** or simila
 
 Most of UserStyles in this collection are for styling pages with similar structure and comes in two UserStyles per a web site. One starting with *Dark* targets color and format. The other one starts with *DeAnnoy* and does hide, un-stick, or rearrange objects on the site. They work nicely together.
 
+For *DeAnnoy* group, see: https://github.com/paponius/UserStyles/blob/main/DeAnnoy/DeAnnoy.md
+
 Note, that the look used in a preview is just a default setting (3). This can very easily be changed using presets in Options.  
 There might be three reasons for a user to seek a change of the usual style of the web page, with black on white text.  
 1. Page is too bright. Hurting the eyes.
