@@ -9,14 +9,28 @@ There could be a slash before hash, or not: /userstyles/#stylish-boycott
  -->
 
 # UserStyles
-Collection of UserStyles (US), web styling CSS for use with **Stylus** or similar browser plugins. ([except Stylish](#stylish-boycott))  
+Collection of UserCSS (UC), web styling CSS for use with **Stylus** or similar browser plugins. ([except Stylish](#stylish-boycott))  
 
-Most of UserStyles in this collection are for styling pages with similar structure and comes in two UserStyles per a web site. One starting with *Dark* targets color and format. The other one starts with *DeAnnoy* and does hide, un-stick, or rearrange objects on the site. They work nicely together.
+There are two types of UserStyles in this collection. Name of one always starts with *Dark*, the other with *DeAnnoy*.  
+They work together or independently.  
+*Dark* UCs use nearly identical Options and the same selection of colors. Thanks to that it's possible to create a "sub-style" which can change an Option for all 40+ targeted web sites in one step.
 
-For *DeAnnoy* group, see: https://github.com/paponius/UserStyles/blob/main/DeAnnoy/DeAnnoy.md
+*Dark* UserCSSs are completely customizable. They can even be set to black and white only.  
+Besides custom colors, they also add some features to a web page content.  
+- different color for visited - read article pages
+- different color for links to specific article pages and to a general topic pages (which are mostly time waster for a reader re-circulation purpose)
+- change of text size, font and space between lines (extra useful on a mobile to have comfortably readable text but not have to swipe around too much)
+- different colors for specific elements of a page. e.g. to have a special color for byline helps to quickly find a date of an article page
+- color for ADs background, so an AD will not trick a reader to think it's part of the article content
 
-Note, that the look used in a preview is just a default setting (3). This can very easily be changed using presets in Options.  
-There might be three reasons for a user to seek a change of the usual style of the web page, with black on white text.  
+Because of a limitation of a repository, some UserCSS are not accessible from Stylus popup menu and can only be added from the repository. e.g. torrent sites, Radio Free Europe  
+[Link to the repository](https://userstyles.world/user/papo)
+
+*DeAnnoy* UserCSSs usually offer an Option to un-stick headers, make article text wider, rearrange or hide objects on a site.  
+see: https://github.com/paponius/UserStyles/blob/main/DeAnnoy/DeAnnoy.md
+
+Note, that the look used in a thumbnail preview is just a default setting (3). This can very easily and completely be changed in Options.  
+There might be three reasons for a user to seek a change of the usual style of the web page, with black text on white background.  
 1. Page is too bright. Hurting the eyes.
 2. Page is not clean, uniform.
 3. The page is hypnotizing and is hard to keep focus while reading."
@@ -26,10 +40,8 @@ Here is an example how Wikipedia would look, for each of these points, with a ch
 <img src="https://github.com/user-attachments/assets/947b507b-6e26-4ede-893c-690a5676dfa6" width="33%">
 <img src="https://github.com/user-attachments/assets/fd1d7a0e-3dd1-4868-9b59-dd88100301f7" width="33%">
 
-And as all styles are using the same CSS variables, a style "to rule them all" can easily be created, which would change the look for all sites I styled using just one setting.  
-
-Despite the customization, the *Dark* theme must stay "dark". You can change primary text color to black and background color to white, but there usually are other hard coded components and the page will be rendered unreadable.  
-The reason to allow changing of primary/secondary text is to have less contrasted text. But the text color must remain whitish.  
+Despite the customization, the *Dark* theme must stay "dark". That is lighter text on darker background.  
+The reason the primary text color can be changed (from white) is to have less contrasted text if desired. But the text color should remain whitish.  
 
 [m] in the description of a style from this set means it also covers mobile version of a page, and/or various page width. Without the [m] in the description, the result is uncertain.
 
@@ -115,7 +127,7 @@ When a background is an image (or a pattern made from an image), should the back
 On some (newer) US, for this option if() function is used. This function is today supported only on Chrome. Firefox will ignore this Option.
 
 ##### ADs background color
-Frame ADs in a color shade. This makes ADs, specially those trying to mimic an article story stick-out.
+Frame ADs in a color shade. This makes ADs, specially those trying to mimic an article story stick-out. Text on ADs may not be readable with other than white background color (see ADs below).
 
 The practice of using a pattern for page background and text background, instead of a solid color has an important purpose of not hypnotizing the reader. They do help to stay on the line and in focus. The negative effect of solid background and sharp contrast of a text on people reading it is a proofed concept.  
 
@@ -132,17 +144,23 @@ I use these _styles_ myself since 2017, so there is some warranty of continuity.
 I have tens of _styles_ and plan to share majority of them.  
 
 ### ADs
-A preview image of these Styles do not show ADs. But they are not removed by these UserStyles.  
-I don't want to support general AD removing. Also, to follow a practice of not combining multiple features into one,  
-"Dark" styles do change color style, "DeAnnoy" styles do remove or change behavior of certain page elements and, if desired, find and install a style for removing ADs.  
-I do not provide them. Multiple styles for one web site can work together without any measurable overhead.
+Standard ADs are not removed by *Dark* and *DeAnnoy* UserCSS.  
+For two reasons. I don't want to support general AD removing. And to follow a practice of not combining multiple purposes into one package.  
 
-The exception are some annoying ADs, masking themselves as main page content, leading to other useless pages, or are otherwise intrusive.  
-These ADs are 1, background-colored/bordered by "Dark" styles. 2, can be disabled in "DeAnoy" styles.
+The exception are annoying and nefarious ADs. Such can be disabled in *DeAnnoy* UC.
+I consider annoying ADs to be those sticking on the screen, or hiding page content until dismissed. I try to unstick them, not hide them.  
+Nefarious ADs imitate a style of a news article. They look or even say they are relevant to the news article, but they never contain what was promised they would.  
+Opening them results in wasted time or even being mislead about some health treatment as they try to pretend they were written by some respected news outlet.  
+Sometimes these AD providers mix such ADs with real related stories. In some *DeAnnoy* UC there is an Option to only hide ADs from such blocks, in some only to hide whole more-on sections.
 
-These includes 3rd party enhancers with "(i)Relevant" articles, like Outbrain, Dianomi.  
-Moreover, they are mostly embedded in a shadow DOM or an iframe. And that makes them impossible or difficult to style.
+more-on cards not dark-styled or unreadable  
+Some cards on moreon sections mentioned above can't be styled. I try to return light BG for them, or just exclude those sections from dark styling, while offering an Option to hide them in *DeAnnoy*.  
+As I myself have them disabled, I rarely check if text on them is at least readable, but I would fix an issue with them if reported.
 
+Some ADs might become unreadable.  
+*Dark* UserCSS offer Option to highlight ADs by adding a custom background to them. But this might make some poorly coded ADs unreadable.  
+Furthermore, in some cases, ADs in an iframe without src will get dark background and white text colors, which also breaks readability of such ADs.  
+I don't try to fix these cases. The content provider still gets paid by the AD owner and the AD owner should not have been relying on white BG and black text.
 
 ### Features
 Dark _Styles_ I use for news media and similar sites have these common features:  
