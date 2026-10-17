@@ -1,0 +1,645 @@
+/* ==UserStyle==
+@name           Dark rferl - Radio Free Europe, Radio Liberty [papo] clone 5
+@namespace      github.com/paponius/userstyles
+@version        1.2.3
+@description    Notes and feedback: https://github.com/paponius/userstyles/
+@author         Papo
+@homepageURL    https://github.com/paponius/userstyles/
+@supportURL     https://github.com/paponius/userstyles/
+@license        CC BY-NC-SA 4.0
+@preprocessor   uso
+
+@var color  p-color-primary       "Text Primary" white
+@var color  p-color-secondary     "Text Secondary" #ccc
+@var color  p-color-headline      "Headline" #c3e9ff
+@var color  p-color-heading       "Headings" #678CB1
+@var select p-background-base     "Background" {
+  'dft:Tiles': `#000 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAACVBMVEUaGhohISElJSUh9lebAAAB20lEQVRIx4XWuZXDMAwE0C0SAQtggIIYoAAEU+aKOHhYojTrYP2+QfOW/5QIJOih/q8HwF/pb3EX+UPIveYcQGgEHiu9hI+ihEc5Jz5KBIlRRRaJ1JtoSAl5Hw96hLB1/up1tnIXOck5jZQy+3iU2hAOKSH1JvwxHsp+5TLF5MOl1/MQXsVs1miXc+KDbYydyMeUgpPQreZ7fWidbNhkXNJSeAhc6qHmHD8AYovunYyEACWEbyIhNeB9fRrH3hFi0bGPLuEW7xCNaohw1vAlS805nfsrTspclB/hVdoqusg53eH7FWot+wjYpOViX8KbFFKTwlnzvj65P9H/vD0/hibYBGhPwlPO8TmxRsaxsNnrUmUXpNhirlJMPr6Hqq9k5Xn/8iYQHYIuQsWFC6Z87IOxLxHphSY4SpuiU87xJnJr5axfeRd+lnMExXpEWPpuZ1v7qZdNBOjiHzDREHX5fs5Zz9p6X0vVKbKKchlSl5rv+3p//FJ/PYvoKryI8vs+2G9lzRmnEKkh+BU8yDk515jDj/HAswu7CCz6U/Mxb/PnC9N41ndpU4hUU7JGk/C9PmP/M2xZYdvBW2PObyf1IUiIzoHmHW9yTncliYs9A9tVNppdShfgQaTLMf+j3X723tLeHgAAAABJRU5ErkJggg==)`,
+  'rb:Rich black (FOGRA29)': '#010B13',
+  'dc:Dark charcoal': '#333',
+  'cst:Custom': 'var(--p-background-base-custom, none)',
+  'nbg:None': 'none'
+}
+@var text   p-background-base-custom "Custom Background" "#000 url(data:image/png;base64,ADD_YOUR_DATA_HERE)"
+@var select p-bg-options          "Background image type" [ 'Tiled', 'Fit:Fit Window' ]
+@var select p-bg-attachment       "Background image attachment" {
+  's:Scroll': ' ',
+  'f:Fixed': 'fixed'
+}
+@var select p-background          "Text Background" {
+  'dft:Stripes': '#000 url(data:image/gif;base64,R0lGODlhBQAFAIAAAB0dHRERESH5BAAAAAAALAAAAAAFAAUAAAIHjAOXtqgXCgA7)',
+  'rb:Rich black (FOGRA29)': '#010B13',
+  'cst:Custom': 'var(--p-background-custom, none)',
+  'nbg:None': 'none'
+}
+@var text   p-background-custom   "Custom Text Background" "#000 url(data:image/png;base64,ADD_YOUR_DATA_HERE)"
+@var range  p-size-primary-text   "Text Primary size"         [18, 10, 30, 1, "px"]
+@var range  p-size-primary-line   "Text Primary line height"  [26, 12, 35, 1, "px"]
+@var select p-font-primary        "Text Primary font" {
+	'Original': 'serif',
+	'serif': 'serif',
+	'TimesNR:┠ Times New Roman': 'times new roman',
+	'Times:┠ Times': 'times',
+	'Georgia:┠ Georgia': 'georgia',
+	'Cambria:┠ Cambria': 'Cambria',
+	'CourierNew:┖ Courier New': 'Courier New',
+	'sans-serif': 'sans-serif',
+	'Arial:┠ Arial': 'arial',
+	'Tahoma:┠ Tahoma': 'Tahoma',
+	'Verdana:┠ Verdana': 'Verdana',
+	'Helvetica:┠ Helvetica': 'Helvetica',
+	'Calibri:┖ Calibri': 'calibri',
+	'Ink Free': 'Ink Free',
+	'Custom': 'var(--p-font-primary-custom, none)'
+}
+@var text   p-font-primary-custom "Custom Text Primary font"  'georgia,"times new roman",times,serif'
+
+@var color  p-color-headline-visited 'Headline of read, "visited" story (to disable, change to transparent)'        #666
+@var color  p-color-link          "Link color"                #82C1FF
+@var color  p-color-link-visited  "Visited link color in Article body"        violet
+@var color  p-color-link-hover    "Link color hover"          hsl(210, 100%, 85%)
+@var color  p-color-dark          "Text insignificant"        #6e6e6e
+@var color  p-color-lead          "Text lead"                 #ffdede
+@var color  p-color-deck          "Text deck"                 #ffdede
+@var color  p-color-byline        "Text byline"               #C56E6E
+@var color  p-color-breadcrumb    "Text breadcrumb"           hsl(140, 40%, 75%)
+# --- END: common block ---
+
+@var text   p-background-header   "Header Background"         'var(--p-background)'
+
+@var range  p-size-primary-line   "Text Primary line height"  [1.4, 0.8, 3, 0.1, '']
+@var select p-font-primary        "Text Primary font" {
+	'Original': 'Skolar-Light-Latin,Georgia,Times,"Times New Roman",serif',
+	'serif': 'serif',
+	'TimesNR:┠ Times New Roman': 'times new roman',
+	'Times:┠ Times': 'times',
+	'Georgia:┠ Georgia': 'georgia',
+	'Cambria:┠ Cambria': 'Cambria',
+	'CourierNew:┖ Courier New': 'Courier New',
+	'sans-serif': 'sans-serif',
+	'Arial:┠ Arial': 'arial',
+	'Tahoma:┠ Tahoma': 'Tahoma',
+	'Verdana:┠ Verdana': 'Verdana',
+	'Helvetica:┠ Helvetica': 'Helvetica',
+	'Calibri:┖ Calibri': 'calibri',
+	'Ink Free': 'Ink Free',
+	'Custom': 'var(--p-font-primary-custom, none)'
+}
+@var text   p-font-primary-custom "Custom Text Primary font"  'Skolar-Light-Latin,Georgia,Times,"Times New Roman",serif'
+
+@var select xxx 'Get my "DeAnnoy rferl [papo]" Style to fix the annoying head bar and navi bar. https://userstyles.world/style/15811/deannoy-rferl-papo-radio-free-europe-liberty' {
+  'You need to copy the text on the left with a mouse, right click and choose open in tab. This is not a setting.': 0
+}
+
+==/UserStyle== */
+
+/* Do NOT edit this file.
+   It will disable updates, instead create another style to override desired rules. Or CSS variables.
+   I don't use !important where not required to allow that. You need to check injection order in Stylus.
+
+   Used p-background-base and p-bg-options from: https://github.com/StylishThemes
+   This preprocessor header and global variables are common part used in most of my styles. Version: 2.0.2
+ */
+@-moz-document domain("rferl.org"), domain("radiosvoboda.org"), domain("svoboda.org"), domain("idelreal.org"), domain("europalibera.org"), domain("currenttime.tv") {
+
+/* todo: sticky header when scrolling up. in: pg-title pg-title--sticky-share */
+
+/* 
+I am not periodically checking all sites. They mostly use the same style and work. Please report if there are unreadeable elements.
+EN: rferl.org
+UA: radiosvoboda.org
+svoboda.org
+romania.europalibera.org
+moldova.europalibera.org
+many more: https://www.rferl.org/navigation/allsites
+ */
+ 
+/* HP body: pg-section pg-home
+Art body:   pg-arch arch-news
+ */
+
+:root {
+	--p-color-primary: /*[[p-color-primary]]*/;
+	--p-color-secondary: /*[[p-color-secondary]]*/;
+	--p-color-dark: /*[[p-color-dark]]*/;
+	--p-color-headline: /*[[p-color-headline]]*/;
+	--p-color-heading: /*[[p-color-heading]]*/;
+	--p-color-deck: /*[[p-color-deck]]*/;
+	--p-color-lead: /*[[p-color-lead]]*/;
+	--p-color-breadcrumb: /*[[p-color-breadcrumb]]*/;
+	--p-color-byline: /*[[p-color-byline]]*/;
+	--p-color-link: /*[[p-color-link]]*/;
+	--p-color-link-visited: /*[[p-color-link-visited]]*/;
+	--p-color-link-hover: /*[[p-color-link-hover]]*/;
+	--p-color-headline-visited: /*[[p-color-headline-visited]]*/;
+	--p-background-base: /*[[p-background-base]]*/ /*x[[p-bg-attachment]]*/;
+	--p-bg-attachment: /*[[p-bg-attachment]]*/;
+	--p-background-base-custom: /*[[p-background-base-custom]]*/;
+	--p-background: /*[[p-background]]*/;
+	--p-background-custom: /*[[p-background-custom]]*/;
+	--p-background-header: /*[[p-background-header]]*/;
+	--p-size-primary-text: /*[[p-size-primary-text]]*/;
+	--p-size-primary-line: /*[[p-size-primary-line]]*/;
+	--p-font-primary: /*[[p-font-primary]]*/;
+	--p-font-primary-custom: /*[[p-font-primary-custom]]*/;
+
+	--p-color-BG-ADs: /*[[p-color-BG-ADs]]*/;
+}
+/* prefixing with --p- to avoid collisions with site's styles, or another UserCSS. And to easily see them in the Inspector. */
+
+/* using site's variables */
+/* :root {
+	--something: var(--p-background-base);
+} */
+
+
+/* -- masthead -- */
+.burger__label
+,.hdr-trigger__ico
+,.hdr-20__secondary-item, .hdr-20__secondary-item:visited
+{
+	color: hsl(200, 47%, 81%);
+	/* --was-color: #1a3948; */
+}
+.hdr-20__category, .hdr-20__category:visited {
+	color: var(--p-color-breadcrumb);
+/* 	color: hsl(200, 47%, 81%); */
+	/* --was-color: #48616d; */
+}
+.main-logo {
+	filter: brightness(250%);
+}
+
+.hdr-20__inner {
+	background: var(--p-background-header);
+	/* --was-background: #fff; */
+	box-shadow: 0 0 10px 1px #000000eb;
+	/* --was--webkit-box-shadow: 0 0 20px rgba(0,0,0,0.1),0 -30px 0 #fff; */
+	/* --was-box-shadow: 0 0 20px rgba(0,0,0,0.1),0 -30px 0 #fff; */
+	border-bottom: 1px solid #fa5420;
+	border-bottom-style: dotted;
+	@supports (background: if(style():)) {
+		box-shadow: if(style(--p-background-header: none): unset; else: 0 0 10px 1px #000000eb);
+		background: if(style(--p-background-header: none): black; else: var(--p-background-header));
+	}
+}
+/* only HP */
+/* Not perfect, as it's two BG next to each other. A pattern is interrupted.
+   Shadow and border from upper is covered with this lower. */
+.hdr-20__inner::after {
+	background: var(--p-background-header);
+/* 	background: none; */
+	/* --was-background: #fff; */
+	@supports (background: if(style():)) {
+/* 		box-shadow: if(style(--p-background-header: none): unset; else: 0 0 10px 1px #000000eb); */
+		background: if(style(--p-background-header: none): black; else: var(--p-background-header));
+	}
+}
+/* .hdr-20, .hdr-20--big, */
+
+/* share */
+.sticky-share-container {
+	background: var(--p-background);
+	/* --was-background: #fff; */
+	box-shadow: 0 0 10px 1px #000000eb;
+	border-bottom: 1px solid #fa5420;
+	border-bottom-style: dotted;
+}
+.sticky-share-container #logo-sticky-share {
+	filter: brightness(250%);
+}
+.sticky-share-container .pg-title {
+	color: var(--p-color-headline);
+	/* --was-color: #1a3948; */
+}
+
+/* - menu - */
+.menu-pnl {
+	background: var(--p-background);
+	box-shadow: 0 0 10px 1px #000000eb;
+	/* --was-background: #fff; */
+ 	background-color: rgba(255, 255, 255, .05);
+	background-blend-mode: lighten;
+/* 	background-blend-mode: color-burn; */
+/* 	background-blend-mode: darken; */
+
+}
+.main-nav__ctrl:checked ~ .main-nav__item-name--label,
+.main-nav__item-name--link,
+.main-nav__item-name--link:visited,
+.menu-pnl__item-link, .menu-pnl__item-link:visited {
+	color: var(--p-color-primary);
+	/* --was-color: #1a3948; */
+}
+
+
+/* -- hero section -- */
+/* - breadcrumb - */
+/* - headline - */
+.hdr-container h1 {
+	color: var(--p-color-headline);
+}
+/* .pg-title is used on different elements. (Notes: .pg-title) */
+/*  or maybe: .news__item .title:not(.title--media) */
+.news__item .title {
+	color: var(--p-color-headline);
+}
+/* sometimes there are multiple, for no good reason https://www.rferl.org/a/ukraine-sniper-training-russia-war-ghillie-suits/32899926.html */
+.col-title {
+--x-xx: 0;
+}
+.col-title:first-child {
+--x-xx: 1;
+}
+.col-title:first-of-type {
+--x-xx: 2;
+}
+.col-title {
+	background: var(--p-background);
+	box-shadow: 0 0 10px 1px #000000eb;
+}
+.col-title ~ .col-title,
+.col-title > #article-content {
+	background: unset;
+	box-shadow: unset;
+}
+
+/* - deck - dek - */
+/* - lead - lede - perex - */
+/* - byline - */
+.publishing-details .published .date
+/* pages with different style --was-color: #95adb9; */
+, .media-container .publishing-details .published .date {
+	color: var(--p-color-byline);
+	/* --was-color: #678a9b; */
+}
+/* visited is left alone on purpose  .publishing-details a:visited */
+.publishing-details a:hover {
+	color: var(--p-color-byline);
+	/* --was-color: #678a9b; */
+	filter: contrast(200%);
+}
+/* "By", "and" */
+.publishing-details li.links__item {
+	color: var(--p-color-secondary);
+}
+.media-container .hdr-container a
+/* alt style */
+, .publishing-details li.links__item a
+{
+	color: var(--p-color-byline);
+	/* --was-color: #dce4e8; */
+}
+
+/* - lead - lede - */
+
+
+
+/* --- article --- */
+
+/* 2do, theme short https://www.rferl.org/a/serbia-student-protests-novi-sad-video/33242020.html */
+
+.wsw {
+	font-size: var(--p-size-primary-text);
+	font-family: var(--p-font-primary);
+	line-height: var(--p-size-primary-line);
+}
+.wsw p, .wsw ul, .wsw ol, .wsw__table, .wsw__table-container {
+	margin-bottom: calc((var(--p-size-primary-line) * var(--p-size-primary-line) * var(--p-size-primary-line) * 9.8px));
+}
+
+/* -- heading -- */
+.wsw h2 {
+	color: var(--p-color-heading);
+}
+
+
+/* - caption - */
+.caption {
+	color: var(--p-color-secondary);
+	/* --was-color: #48616d; */
+	padding: 7px;
+	/* --was-padding-top: 9px; */
+}
+.media-image figcaption {
+ 	background: rgba(0, 0, 0, .3);
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+
+/* - link - */
+/* - author box - */
+.c-author--hlight {
+ 	background: rgba(255, 255, 255, .05);
+	/* --was-background: #dce4e8; */
+}
+.media-block__title--author a {
+	color: var(--p-color-primary);
+	/* --was-color: #233036; */
+}
+.media-block__title--author a:hover {
+	color: var(--p-color-primary);
+	/* --was-color: #fa5420; */
+}
+/* :visited is left out on purpose. To know I already checked the author before. */
+
+
+
+/* --- features --- */
+/* image placeholder */
+.carousel, .thumb16_9, .thumb1_1, .thumb3_4 {
+ 	background: rgba(0, 0, 0, .3);
+	/* --was-background-color: #edeff0; */
+	/* --was-background-image: url(../../img/image-placeholder.svg?cb=0); */
+}
+
+/* - backgrounder box - */
+.backgrounder {
+ 	background-color: rgba(0, 0, 0, .2);
+	/* --was-background-color: #dce4e8;" */
+}
+
+/* subscribe box */
+.mailchimp-signup-form #form-container {
+ 	background-color: rgba(0, 0, 0, .2);
+ 	background-color: rgba(0, 0, 0, .2);
+	/* --was-background-color: var( --mc-color-form-background); */
+}
+
+/* notice box in right bottom corner with moreon */
+/* below the div is orange from orig */
+@media (min-width: 360px) {
+	html.js .slide-in-wg .wg-hiding-area > div {
+ 		background-color: rgba(0, 0, 0, .9);
+		/* --was-background-color: #fff; */
+	}
+}
+
+/* - Expanding an article - "News Button" - */
+/* this block will also move a clickeable element to the articole box, but as a side effect clicking on right edge of the article box will close it.
+Maybe it will be better to not move "X" button inside the article element. Don't see another solution with CSS. */
+/* move to article box */
+/* .news__buttons.news__buttons--main.pos-abs */
+.news__buttons {
+	margin-right: unset;
+	/* --was-margin-right: -3em; */
+}
+/* "X" button */
+.btn--news-less {
+	top: unset !important
+}
+/* this is the element for mouse events of above buttons */
+/* to cover whole unexpanded article width */
+.news__control-label {
+	margin-right: -7px;
+	/* --was-margin-right: -3em; */
+	padding-left: 12px;
+}
+/* can't set as fixed to cover over the "X" button, it has "Left" calculated by JS. */
+.news__control:not(:checked) ~ .accordeon__target ~ .news__control-label {
+	width: 24px;
+}
+.news__control:not(:checked) ~ .accordeon__target ~ .news__control-label:hover {
+	background-color: #fa542014;
+}
+
+/* e.g. "print", unreadable on some domains (currenttime.tv) */
+.btn.btn--link {
+	color: var(--p-color-dark);
+	/* --was-color: #2d1996; */
+}
+.btn.btn--link:hover .btn__text {
+	color: var(--p-color-primary);
+	/* --was-color: #2d1996; */
+}
+
+
+/* - Summary top of article 2601 - */
+.summary__content {
+ 	background-color: rgba(0, 0, 0, .3);
+	padding-top: 15px;
+	/* --was-padding-top: 36px; */
+	/* li has margin instead */
+	padding-bottom: 1px;
+	/* --was-padding-bottom: 18px; */
+}
+
+/* ADs */
+ADs {
+	background: var(--p-color-BG-ADs);
+}
+
+
+/* -- sidebar -- */
+.region .wsw {
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+/* sign-up form */
+.mailchimp-signup-form {
+	color: hsl(200, 47%, 41%)
+	/*   --mc-color-text: #1a3948; */
+	/* --was-color: var(--mc-color-text); */
+}
+.mailchimp-signup-form .form-control {
+ 	background-color: rgba(0, 0, 0, .3);
+	/* --was-background-color: #fff; */
+}
+
+
+
+/* --- more-on --- */
+/* -- mid-article -- */
+/* different parts now styled by rules from various sections here
+   text here should be link color, not as from: .media-block__title
+   padding should not be changed (see below: .package-list) */
+/* - "See also" - */
+/* or only .also-read? */
+.wsw .also-read {
+ 	background: rgba(0, 0, 0, .3);
+	border-bottom: 1px dotted #fa5420;
+	-webkit-box-shadow: unset;
+	box-shadow: unset;
+
+	.media-block__title {
+		color: var(--p-color-primary);
+	}
+	a:visited .media-block__title {
+		color: var(--p-color-link-visited);
+	}
+}
+
+
+/* -label- */
+.section-head {
+	color: var(--p-color-heading);
+	/* --was-color: #8d9ca4; */
+}
+/* .pg-title is used on different elements (see above also Notes: .pg-title) */
+.pg-title {
+	color: var(--p-color-heading);
+}
+
+
+
+
+/* media-block__content--h probably means horizontal */
+/* also as mid-article more-on, where are bulletpoint and can't be padded .package-list (Notes) */
+.media-block__content:not(.media-block__content--h):not(.package-list) {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/* quite nearly all hedlines */
+/* moved to =card= .media-block__title */
+/* todo check the rest if can be moved */
+.trends-wg__item
+,.podcast-wg__title
+,.podcast-wg__zone-title
+{
+	color: var(--p-color-primary);
+	/* --was-color: #1a3948; */
+}
+a:hover .media-block__title
+,.trends-wg__item:hover, .trends-wg__item:hover .trends-wg__item-number, .trends-wg__item:hover .trends-wg__item-views
+{
+	color: var(--p-color-headline);
+	filter: contrast(140%);
+	/* --was-color: #fb6739; */
+}
+a:visited .media-block__title
+,.trends-wg__item:visited
+{
+	color: var(--p-color-link-visited);
+	/* --was-color: #1a3948; */
+}
+
+/* "Also by ..." */
+.perex {
+	color: var(--p-color-primary);
+	/* --was-color: #000; */
+}
+a:hover .perex {
+	color: var(--p-color-primary);
+	/* --was-color: #000; */
+}
+/* -- sidebar -- */
+
+
+
+
+
+/* === page: HP === */
+.sub-nav__link {
+	color: hsl(200, 47%, 81%);
+	/* --was-color: #1a3948; */
+}
+.sub-nav__link:visited {
+	color: hsl(200, 47%, 81%);
+	/* --was-color: #1a3948; */
+}
+/* return orig */
+.sub-nav__link:hover {
+  color: #fa5420;
+}
+/* Box "Don't Miss"
+   It has white BG, than again BG is set in two pseudos */
+.fredContent__bg--light {
+ 	background-color: rgba(0, 0, 0, .3);
+/*  	background-color: unset; */
+	/* --was-background-color: #fff; */
+}
+.fredContent__slider--light::after, .fredContent__slider--light::before {
+/*  	background: rgba(0, 0, 0, .3); */
+ 	background: unset;
+	/* --was-background: #fff; */
+}
+
+
+
+/* === Card === */
+/* alt: group is when: has(.mb-grid, .list-w-vert, ...more?) */
+/* not ok: .media-block-wrap:not(:has(.col-xs-12.col-sm-12.col-md-12.col-lg-12.mb-grid)) { */
+.media-block-wrap:has(.section-head) {
+ 	background: rgba(0, 0, 0, .3);
+	padding-left: 5px;
+	padding-right: 5px;
+
+	padding-bottom: 0;
+	margin-bottom: 18px;
+	/* --was-padding-bottom: 18px; */
+	padding-top: 0;
+	margin-top: 9px;
+	/* --was-padding-top: 9px; */
+}
+
+.media-block-wrap:not(:has(.section-head)) {
+	background: var(--p-background);
+	box-shadow: 0 0 10px 1px #000000eb;
+}
+
+/* todo: cards inside group on HP */
+
+
+/* more-on */
+.fredContent__slider-item {
+	background: var(--p-background);
+	box-shadow: 0 0 10px 1px #000000eb;
+}
+.media-block__title {
+	color: var(--p-color-primary);
+}
+a:visited .media-block__title {
+	color: var(--p-color-headline-visited);
+}
+
+
+
+/* === common === */
+:root { color-scheme: light dark; }
+
+a {
+	color: var(--p-color-link);
+	/* --was-text-decoration: none; */
+	/* --was-color: #fa5420; */
+}
+a:hover {
+	color: var(--p-color-link-hover);
+	/* --was-color: #fb6739; */
+	/* --was-text-decoration: underline; */
+}
+a:visited {
+	color: var(--p-color-link-visited);
+	/* --was-color: #c93305; */
+}
+
+.news__item
+,#article-content
+{
+	background: var(--p-background);
+	box-shadow: 0 0 10px 1px #000000eb;
+	/* --was-background: #fff; */
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+body {
+	color: var(--p-color-primary);
+	/* --was-color: #1a3948; */
+	/* --was-background-color: #fff; */
+	background: var(--p-background-base) var(--p-bg-attachment);
+	/*[[p-bg-options]]*/
+}
+
+/* 	for darker
+ 	background-color: rgba(0, 0, 0, .3);
+	background-blend-mode: darken;
+
+opacity: .5;
+	filter: invert(1);
+	filter: contrast(30%);
+	filter: hue-rotate(243deg);
+ */
+}

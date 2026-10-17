@@ -1,0 +1,105 @@
+/* ==UserStyle==
+@name           DeAnnoy rferl - Radio Free Europe, Radio Liberty [papo] clone 4
+@namespace      github.com/paponius/userstyles
+@version        1.1.1
+@description    Updated: 2025-01. Notes and feedback: https://github.com/paponius/userstyles/. Unstick the header. Expand main article, hide More News endless stream. Check what it does in style Options, or read @var descriptions on top of the code.
+@author         Papo
+@homepageURL    https://github.com/paponius/userstyles/
+@supportURL     https://github.com/paponius/userstyles/
+@license        CC BY-NC-SA 4.0
+@preprocessor   stylus
+
+--- end of common block ---
+
+
+@var checkbox unstickHeader          'Unstick the header (this will also completely disable the "share header")' 1
+@var checkbox NoEndlessMoron         'Remove endless "More News" and always expand main article.' 0
+@var checkbox nextStoryWidget        'Remove "read next" widget poping up onbottom right of the page after scroll' 1
+@var checkbox NoRecycle              'Distraction Free: No Recycle (more stories, related...)' 0
+
+
+==/UserStyle== */
+/* This preprocesor header and global variables are common part used in many of my styles. Version: 1.1.1 24-03 */
+@-moz-document domain("rferl.org"), domain("radiosvoboda.org"), domain("svoboda.org"), domain("europalibera.org"), domain("currenttime.tv") {
+
+/* disabled. it also targets loaded mid-article videos */
+/* .c-sticky-element--initialised[data-sp_api="pangea-video"]:has(.c-mmp__poster--video):not(:has(.c-mmp__poster--video[style="display: none;"]))::before {
+	content: 'The video player did not load. Probably need to unlock some JS.';
+	display: block;
+	position: relative;
+	bottom: 16px;
+	background: red;
+}
+ */
+
+
+if unstickHeader {
+	/* must be ab solute to cover over "share header" */
+	.hdr-20__inner {
+		position: absolute;
+		/* --was-position: fixed; */
+	}
+	.sticky-share-container {
+		position: unset;
+		/* --was-position: fixed; */
+	}
+}
+
+
+if NoEndlessMoron or NoRecycle {
+
+	/* article page type B, where are many more articles below the main one */
+	.accordeon__item-wrap:not(:first-child),
+	.accordeon__item-wrap + .news__item--spacer,
+	.btn--load-more {
+		display: none;
+		/* --x-xx: 1; */
+	}
+	
+/* 	Notes on these in my Dark rferl style */
+	/* No need for "news buttons, when there is only one article," */
+	.news__buttons {
+		display: none;
+	}
+	/* expand first article (must be block, not unset */
+	.news__control:checked ~ .accordeon__target > * {
+		display: block;
+		/* --was-display: none; */
+	}
+	/* hide "Read more", because it's already expanded */
+	.news__control:checked ~ .news__read-more {
+		visibility: hidden;
+		/* --was-visibility: visible; */
+	}
+/* 	remove the event control element */
+	.news__control-label {
+		display: none;
+	}
+
+}
+
+
+if nextStoryWidget {
+	.js .slide-in-wg {
+		display: none !important;
+	}
+}
+
+
+
+/* inserted in the main article text */
+.also-read {
+	display: none unless not NoRecycle;
+}
+
+/* article page type A, with multiple boxes in right column */
+body:not(.pg-home):not(.pg-section) div:has(> h2.section-head),
+body:not(.pg-home):not(.pg-section) div:has(> .podcast-wg),
+body:not(.pg-home):not(.pg-section) #ymla-section {
+	display: none unless not NoRecycle;
+}
+
+
+
+
+}
