@@ -6,15 +6,11 @@ import requests
 import logging
 
 def setup_logging():
-    # Ensure output directory exists and configure file and console logging
-    os.makedirs("main_output", exist_ok=True)
-    log_file = "main_output/update.log"
-    
+    # Configure console-only logging to avoid git conflicts with log files
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(message)s",
         handlers=[
-            logging.FileHandler(log_file, encoding="utf-8"),
             logging.StreamHandler()
         ]
     )
@@ -23,12 +19,10 @@ def process_styles():
     setup_logging()
     logging.info("Starting style update process.")
     
-    # Check if manifest file exists
     if not os.path.exists("manifest.yml"):
         logging.error("manifest.yml not found.")
         return
 
-    # Load the manifest configuration
     try:
         with open("manifest.yml", "r", encoding="utf-8") as f:
             data = yaml.safe_load(f)
@@ -41,7 +35,8 @@ def process_styles():
         logging.warning("No userstyles found in manifest.yml.")
         return
 
-    # Process each style defined in the manifest
+    os.makedirs("main_output", exist_ok=True)
+
     for style in styles:
         raw_name = style.get("name")
         url = style.get("url")
@@ -51,14 +46,11 @@ def process_styles():
             logging.error(f"Skipping entry due to missing 'name' or 'url': {style}")
             continue
 
-        # Directory uses exact manifest name (preserving spaces and case)
         dir_name = raw_name
-        # File name uses lowercase with spaces replaced by hyphens
         safe_filename = raw_name.lower().replace(" ", "-")
         
         logging.info(f"Processing style: {raw_name} ({url})")
 
-        # Download the style CSS content from the remote URL
         try:
             response = requests.get(url, timeout=30)
             response.raise_for_status()
@@ -67,7 +59,6 @@ def process_styles():
             logging.error(f"Failed to download style '{raw_name}' from {url}: {e}")
             continue
 
-        # 1. Save base file into its directory (named exactly as manifest 'name')
         style_dir = os.path.join("main_output", dir_name)
         os.makedirs(style_dir, exist_ok=True)
         base_filename = os.path.join(style_dir, f"{safe_filename}.user.css")
@@ -80,7 +71,6 @@ def process_styles():
             logging.error(f"Failed to write file {base_filename}: {e}")
             continue
 
-        # 2. Generate clones for the site-clones branch if specified
         if clones_count > 0:
             clone_dir = os.path.join("clones_output", dir_name)
             os.makedirs(clone_dir, exist_ok=True)
@@ -89,7 +79,6 @@ def process_styles():
                 clone_filename = os.path.join(clone_dir, f"{safe_filename}-clone-{i}.user.css")
                 clone_suffix = f" clone {i}"
                 
-                # Modify the @name tag in the CSS header to include clone number
                 modified_content = re.sub(
                     r'(^@name[ \t]+)(.*)',
                     r'\1\2' + clone_suffix,
