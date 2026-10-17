@@ -1,15 +1,25 @@
-# process_styles.py
 import os
 import re
 import yaml
 import requests
 import logging
 
-def process_styles():
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
-    
+def setup_logging():
     os.makedirs("main_output", exist_ok=True)
-    os.makedirs("clones_output", exist_ok=True)
+    log_file = "main_output/update.log"
+    
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        handlers=[
+            logging.FileHandler(log_file, encoding="utf-8"),
+            logging.StreamHandler()
+        ]
+    )
+
+def process_styles():
+    setup_logging()
+    logging.info("Starting style update process.")
     
     if not os.path.exists("manifest.yml"):
         logging.error("manifest.yml not found.")
@@ -82,6 +92,8 @@ def process_styles():
                     logging.info(f"Generated clone: {clone_filename}")
                 except IOError as e:
                     logging.error(f"Failed to write clone file {clone_filename}: {e}")
+
+    logging.info("Style update process completed.")
 
 if __name__ == "__main__":
     process_styles()
