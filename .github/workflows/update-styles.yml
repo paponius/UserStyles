@@ -1,3 +1,4 @@
+# .github/workflows/update-styles.yml
 name: Update Style Daily
 
 on:
@@ -26,13 +27,27 @@ jobs:
       - name: Process styles
         run: python process_styles.py
 
-      - name: Publish to site-clones branch
+      - name: Sync base files to main branch
+        run: |
+          # Copy generated base directories into the repository root
+          cp -r main_output/* .
+          rm -rf main_output
+
+      - name: Commit base files to main
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update base userstyles"
+          file_pattern: "**/ *.user.css manifest.yml"
+
+      - name: Push clones to site-clones branch
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Backup generated files
-          cp -r site-clones /tmp/site-clones-backup
+          if [ ! -d "clones_output" ] || [ -z "$(ls -A clones_output)" ]; then
+            echo "No clones to push."
+            exit 0
+          fi
 
           # Switch to site-clones branch or create it as an orphan if it doesn't exist
           if git ls-remote --exit-code --heads origin site-clones; then
@@ -43,13 +58,13 @@ jobs:
             git rm -rf .
           fi
 
-          # Clear working tree and copy new files to root of the branch
+          # Clear working tree and copy new clone files
           find . -maxdepth 1 ! -name '.' ! -name '.git' -exec rm -rf {} +
-          cp -r /tmp/site-clones-backup/* .
+          cp -r clones_output/* .
 
           git add .
           if git diff --staged --quiet; then
-            echo "No changes to commit."
+            echo "No changes in clones to commit."
           else
             git commit -m "Auto-update site-clones: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
             git push origin site-clones
