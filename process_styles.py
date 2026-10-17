@@ -5,22 +5,11 @@ import yaml
 import requests
 import logging
 
-def setup_logging():
-    os.makedirs("site-clones", exist_ok=True)
-    log_file = "site-clones/update.log"
-    
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(message)s",
-        handlers=[
-            logging.FileHandler(log_file, encoding="utf-8"),
-            logging.StreamHandler()
-        ]
-    )
-
 def process_styles():
-    setup_logging()
-    logging.info("Starting style update process.")
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+    
+    os.makedirs("main_output", exist_ok=True)
+    os.makedirs("clones_output", exist_ok=True)
     
     if not os.path.exists("manifest.yml"):
         logging.error("manifest.yml not found.")
@@ -47,7 +36,7 @@ def process_styles():
             logging.error(f"Skipping entry due to missing 'name' or 'url': {style}")
             continue
 
-        safe_name = raw_name.replace(" ", "-")
+        safe_name = raw_name.lower().replace(" ", "-")
         logging.info(f"Processing style: {raw_name} ({url})")
 
         try:
@@ -58,34 +47,41 @@ def process_styles():
             logging.error(f"Failed to download style '{raw_name}' from {url}: {e}")
             continue
 
-        base_filename = f"site-clones/{safe_name}.user.css"
+        # 1. Save base file into its own directory for the main branch
+        style_dir = os.path.join("main_output", safe_name)
+        os.makedirs(style_dir, exist_ok=True)
+        base_filename = os.path.join(style_dir, f"{safe_name}.user.css")
+        
         try:
             with open(base_filename, "w", encoding="utf-8") as bf:
                 bf.write(content)
-            logging.info(f"Successfully saved: {base_filename}")
+            logging.info(f"Saved base file: {base_filename}")
         except IOError as e:
             logging.error(f"Failed to write file {base_filename}: {e}")
             continue
 
-        for i in range(1, clones_count + 1):
-            clone_filename = f"site-clones/{safe_name}-site-clone-{i}.user.css"
-            clone_suffix = f" site-clone-{i}"
-            
-            modified_content = re.sub(
-                r'(^@name[[:blank:]]+)(.*)',
-                r'\1\2' + clone_suffix,
-                content,
-                flags=re.MULTILINE
-            )
-            
-            try:
-                with open(clone_filename, "w", encoding="utf-8") as cf:
-                    cf.write(modified_content)
-                logging.info(f"Generated clone: {clone_filename}")
-            except IOError as e:
-                logging.error(f"Failed to write clone file {clone_filename}: {e}")
+        # 2. Generate clones for the site-clones branch if specified
+        if clones_count > 0:
+            clone_dir = os.path.join("clones_output", safe_name)
+            os.makedirs(clone_dir, exist_ok=True)
 
-    logging.info("Style update process completed.")
+            for i in range(1, clones_count + 1):
+                clone_filename = os.path.join(clone_dir, f"{safe_name}-clone-{i}.user.css")
+                clone_suffix = f" clone {i}"
+                
+                modified_content = re.sub(
+                    r'(^@name[[:blank:]]+)(.*)',
+                    r'\1\2' + clone_suffix,
+                    content,
+                    flags=re.MULTILINE
+                )
+                
+                try:
+                    with open(clone_filename, "w", encoding="utf-8") as cf:
+                        cf.write(modified_content)
+                    logging.info(f"Generated clone: {clone_filename}")
+                except IOError as e:
+                    logging.error(f"Failed to write clone file {clone_filename}: {e}")
 
 if __name__ == "__main__":
     process_styles()
