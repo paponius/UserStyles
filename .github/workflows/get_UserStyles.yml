@@ -1,8 +1,8 @@
-name: Update Style Daily
+name: Update Style Daily v1
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  ##schedule:
+  ##  - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:
