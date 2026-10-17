@@ -1,0 +1,17 @@
+# manifest.yml
+userstyles:
+  - name: "Dark BBC"
+    url: "https://userstyles.world/api/style/13175.user.css"
+    clones: 0
+  - name: "Dark rferl - Radio Free Europe, Radio Liberty"
+    url: "https://userstyles.world/api/style/15810.user.css"
+    clones: 5
+  - name: "DeAnnoy rferl - Radio Free Europe, Radio Liberty"
+    url: "https://userstyles.world/api/style/15811.user.css"
+    clones: 5
+  - name: "Dark Denik N"
+    url: "https://userstyles.world/api/style/30846.user.css"
+    clones: 2
+  - name: "DeAnnoy Denik N"
+    url: "https://userstyles.world/api/style/30847.user.css"
+    clones: 1
