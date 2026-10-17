@@ -1,3 +1,4 @@
+# .github/workflows/update-styles.yml
 name: Update Style Daily
 
 on:
@@ -35,7 +36,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-update base userstyles and log"
-          file_pattern: "**/*.user.css manifest.yml **/update.log"
+          file_pattern: "**/*.user.css manifest.yml update.log"
 
       - name: Push clones to site-clones branch
         run: |
@@ -47,18 +48,20 @@ jobs:
             exit 0
           fi
 
-          # Switch to site-clones branch safely using -- to disambiguate from local files/dirs
+          # Backup clones_output before clearing the working tree
+          cp -r clones_output /tmp/clones_output_backup
+
           if git ls-remote --exit-code --heads origin site-clones; then
             git fetch origin site-clones
-            git checkout -- site-clones
+            git checkout -B site-clones origin/site-clones
           else
             git checkout --orphan site-clones
             git rm -rf .
           fi
 
-          # Clear working tree and copy new clone files
           find . -maxdepth 1 ! -name '.' ! -name '.git' -exec rm -rf {} +
-          cp -r clones_output/* .
+          cp -r /tmp/clones_output_backup/* .
+          rm -rf /tmp/clones_output_backup
 
           git add .
           if git diff --staged --quiet; then
