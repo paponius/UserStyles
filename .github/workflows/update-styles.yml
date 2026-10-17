@@ -1,0 +1,56 @@
+name: Update Style Daily
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install pyyaml requests
+
+      - name: Process styles
+        run: python process_styles.py
+
+      - name: Publish to site-clones branch
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Backup generated files
+          cp -r site-clones /tmp/site-clones-backup
+
+          # Switch to site-clones branch or create it as an orphan if it doesn't exist
+          if git ls-remote --exit-code --heads origin site-clones; then
+            git fetch origin site-clones
+            git checkout site-clones
+          else
+            git checkout --orphan site-clones
+            git rm -rf .
+          fi
+
+          # Clear working tree and copy new files to root of the branch
+          find . -maxdepth 1 ! -name '.' ! -name '.git' -exec rm -rf {} +
+          cp -r /tmp/site-clones-backup/* .
+
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto-update site-clones: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+            git push origin site-clones
+          fi
