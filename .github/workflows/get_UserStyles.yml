@@ -1,0 +1,28 @@
+name: Update Style Daily
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download latest file
+        run: |
+          mkdir -p denikn
+          curl -sL "https://userstyles.world/api/style/30847.user.css" -o "denikn/30847.user.css"
+
+      - name: Commit and push if changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update style 30847.user.css"
+          file_pattern: "denikn/30847.user.css"
+          
