@@ -23,12 +23,11 @@ jobs:
           # Create copy with 'copy' prepended to filename
           cp denikn/30847.user.css denikn/copy30847.user.css
           
-          # Append 'copy' to the line starting with @name in the copied file
-          sed -i '/^@name/s/$/ copy/' denikn/copy30847.user.css
+          # Append 'copy' to the line starting with @name followed by a space or tab
+          sed -i '/^@name[[:blank:]]/s/$/ copy/' denikn/copy30847.user.css
 
       - name: Commit and push if changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-update style and create modified copy"
           file_pattern: "denikn/30847.user.css denikn/copy30847.user.css"
-          
