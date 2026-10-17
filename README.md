@@ -9,41 +9,60 @@ There could be a slash before hash, or not: /userstyles/#stylish-boycott
  -->
 
 # UserStyles
-This is a description of *Dark* and *DeAnnoy* UserStyles, which can be found [on UseStyles.world (USw)](https://userstyles.world/user/papo)
 
+A collection of **Dark** and **DeAnnoy** UserStyles covering dozens of websites, available on [UserStyles.world (USw)](https://userstyles.world/user/papo).
 
-It is a collection covering dozens of web sites. UserStyles in it share common visual look, structure of Options and there is a "super" style which can be used to configure them all in one place.
+All styles in this collection share a consistent visual design and standard options layout. They can also be configured globally from a single place using a master _Global Config_ UserStyle, which sets global CSS variables that automatically override individual style settings.
 
-*Dark* and *DeAnnoy* can be installed simultaneously and there are no visible performance setbacks.
+> **Note:** *Dark* and *DeAnnoy* styles can be installed simultaneously with no performance penalty.
 
-Description: [Installing UserStyles.](https://github.com/paponius/UserStyles/wiki/Installing-UserStyles)
+---
 
-All changes done by these UserStyles are customizable and there are also presets.  
+## Quick Links
 
-Description: [Options in *Dark* and *DeAnnoy*](https://github.com/paponius/UserStyles/wiki/Dark-Options)  
+* 📖 **[Installation Guide](https://github.com/paponius/UserStyles/wiki/Installing-UserStyles)** – How to install and set up these styles.
+* ⚙️ **[Customization & Presets](https://github.com/paponius/UserStyles/wiki/Dark-Options)** – Learn how to customize options and use built-in presets.
+* 🔄 **[Site Clones Architecture](https://www.google.com/search?q=https://github.com/paponius/UserStyles/tree/site-clones)** – Technical details on how multi-site clones are automatically generated and synchronized across USw.
 
-*Dark* Userstyle can be switched with presets to look like this:  
+---
+
+## Visual Themes & Presets
+
+*Dark* UserStyles can be customized or switched via presets to fit your preference:  
 <img src="https://github.com/user-attachments/assets/10f476c8-2309-412d-b7ad-7839236d69e4" width="33%">
 <img src="https://github.com/user-attachments/assets/947b507b-6e26-4ede-893c-690a5676dfa6" width="33%">
 <img src="https://github.com/user-attachments/assets/fd1d7a0e-3dd1-4868-9b59-dd88100301f7" width="33%">
 
-## Dark
-The main purpose is obvious. Besides of changing a web page to dark, these *Dark* UserStyles do:
-- The pattern of the background is a visual aid, which helps for more speedy reading (it can be changed in Options to any color or other pattern)
-- Text which is less significant, or unsignificant has different color (darker white, changeable in Options)
-- Elements which belongs together are grouped by darker background.
-- There is a different color for visited - read article pages
-- Different color for links to specific article pages and for links to a general topic pages (which are mostly time waster, just to keep visitor re-circulated)
-- Possibility to change text size, font and space between lines (extra useful on a mobile to have comfortably readable text but not have to swipe around too much)
-- Different colors for specific elements of a page. e.g. topic-breadcrumbs, byline, date, lead, dek, this helps to quickly find them
-- Visual separation of more-ons (another re-circulation attempt)
-- Color for ADs background, so an AD will not trick a reader to think it's a part of the article content
+---
 
-## DeAnnoy
-The purpose is to remove intruding or distracting elements and to see more text without scrolling. Specially on a mobile. Every tweak DeAnnoy does can be turned ON/OFF in Options. Not all of these are in DeAnnou UserStyles for all sites:
-- Do not keep a header or toolbar sticking on a page
-- Article body width
-- Remove fake articles, which are actually camouflaged ADs (standard ADs are not removed on purpose by this UserStyle)
-- More more-ons and sometimes ADs to bottom of article body
+## 🌙 Dark UserStyles
 
-Many other tweaks which are specific to a visited site.
+Beyond applying dark mode, these styles improve legibility and visual structure:
+
+* **Patterned Backgrounds:** Textured backgrounds serve as a subtle visual guide to speed up reading (customizable to solid colors or other patterns in Options).
+* **Text Hierarchy:** Low-priority or secondary text is dimmed to a softer off-white for better visual focus.
+* **Content Grouping:** Related elements are visually grouped using subtle background shading.
+* **Smart Link Colors:**
+* Distinct styling for visited/read articles.
+* Separate color coding for direct article links vs. generic topic/category pages.
+
+
+* **Typography Controls:** Adjust font size, font family, and line height for comfortable reading on any device — extra useful on mobile to minimize excessive scrolling.
+* **Metadata Highlighting:** Distinct colors for key structural elements like breadcrumbs, bylines, dates, and leads.
+* **Visual Separators:** Clear visual boundaries around recirculation modules ("more stories").
+* **Ad Container Styling:** Applies distinct background shading to ad containers so promotional content is never mistaken for article text.
+
+---
+
+## 🚫 DeAnnoy UserStyles
+
+Designed to remove annoying, intrusive elements and maximize visible text without scrolling — especially useful on mobile displays.
+
+> **Note:** Feature availability varies by website. Not every site requires all tweaks, but every feature present can be toggled on or off via Options.
+
+* **Unstick Headers:** Converts sticky or fixed-position headers and toolbars to scroll naturally with the page, reclaiming screen space.
+* **Article Width & Line Length:** Adjusts the width of the article container so you can customize line lengths to your reading preference — whether you prefer shorter lines for easier tracking or wider text to reduce scrolling.
+* **Hide Disguised Fake Articles:** Removes sponsored posts masquerading as real editorial content, preventing you from being misled or wasting time on marketing pitches (standard banner ads are left untouched).
+* **Decluttering:** Relocates inline recirculation links and promotional clutter to the bottom of the article body.
+* **Site-Specific Tweaks:** Additional targeted fixes tailored to individual domain layouts.
+
