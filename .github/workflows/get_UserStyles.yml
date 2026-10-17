@@ -15,14 +15,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download latest file
+      - name: Download latest file and create modified copy
         run: |
           mkdir -p denikn
           curl -sL "https://userstyles.world/api/style/30847.user.css" -o "denikn/30847.user.css"
+          
+          # Create copy with 'copy' prepended to filename
+          cp denikn/30847.user.css denikn/copy30847.user.css
+          
+          # Append 'copy' to the line starting with @name in the copied file
+          sed -i '/^@name/s/$/ copy/' denikn/copy30847.user.css
 
       - name: Commit and push if changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-update style 30847.user.css"
-          file_pattern: "denikn/30847.user.css"
+          commit_message: "Auto-update style and create modified copy"
+          file_pattern: "denikn/30847.user.css denikn/copy30847.user.css"
           
