@@ -15,19 +15,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download latest file and create modified copy
+      - name: Download and process styles
         run: |
           mkdir -p denikn
+          
+          # Style 30847
           curl -sL "https://userstyles.world/api/style/30847.user.css" -o "denikn/30847.user.css"
-          
-          # Create copy with 'copy' prepended to filename
           cp denikn/30847.user.css denikn/copy30847.user.css
-          
-          # Append 'copy' to the line starting with @name followed by a space or tab
           sed -i '/^@name[[:blank:]]/s/$/ copy/' denikn/copy30847.user.css
+          
+          # Style 30846
+          curl -sL "https://userstyles.world/api/style/30846.user.css" -o "denikn/30846.user.css"
+          cp denikn/30846.user.css denikn/copy30846.user.css
+          sed -i '/^@name[[:blank:]]/s/$/ copy/' denikn/copy30846.user.css
 
       - name: Commit and push if changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-update style and create modified copy"
-          file_pattern: "denikn/30847.user.css denikn/copy30847.user.css"
+          commit_message: "Auto-update styles and create modified copies"
+          file_pattern: "denikn/30847.user.css denikn/copy30847.user.css denikn/30846.user.css denikn/copy30846.user.css"
