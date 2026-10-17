@@ -27,28 +27,30 @@ jobs:
       - name: Process styles
         run: python process_styles.py
 
-      - name: Sync base files to main branch
-        run: |
-          cp -r main_output/* .
-          rm -rf main_output
-
-      - name: Commit base files to main
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Auto-update base userstyles and log"
-          file_pattern: "**/*.user.css manifest.yml update.log"
-
-      - name: Push clones to site-clones branch
+      - name: Commit and push base files to main branch
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+          cp -r main_output/* .
+          rm -rf main_output
+
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit on main."
+          else
+            git commit -m "Auto-update base userstyles"
+            git pull --rebase origin main
+            git push origin main
+          fi
+
+      - name: Push clones to site-clones branch
+        run: |
           if [ ! -d "clones_output" ] || [ -z "$(ls -A clones_output)" ]; then
             echo "No clones to push."
             exit 0
           fi
 
-          # Backup clones_output before clearing the working tree
           cp -r clones_output /tmp/clones_output_backup
 
           if git ls-remote --exit-code --heads origin site-clones; then
