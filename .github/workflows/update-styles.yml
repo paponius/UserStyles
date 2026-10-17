@@ -1,4 +1,3 @@
-# .github/workflows/update-styles.yml
 name: Update Style Daily
 
 on:
@@ -29,15 +28,14 @@ jobs:
 
       - name: Sync base files to main branch
         run: |
-          # Copy generated base directories into the repository root
           cp -r main_output/* .
           rm -rf main_output
 
       - name: Commit base files to main
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-update base userstyles"
-          file_pattern: "**/ *.user.css manifest.yml"
+          commit_message: "Auto-update base userstyles and log"
+          file_pattern: "**/*.user.css manifest.yml **/update.log"
 
       - name: Push clones to site-clones branch
         run: |
@@ -49,10 +47,10 @@ jobs:
             exit 0
           fi
 
-          # Switch to site-clones branch or create it as an orphan if it doesn't exist
+          # Switch to site-clones branch safely using -- to disambiguate from local files/dirs
           if git ls-remote --exit-code --heads origin site-clones; then
             git fetch origin site-clones
-            git checkout site-clones
+            git checkout -- site-clones
           else
             git checkout --orphan site-clones
             git rm -rf .
