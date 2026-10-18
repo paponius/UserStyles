@@ -35,33 +35,44 @@ jobs:
           cp -r main_output/* .
           rm -rf main_output
 
-          git add .
+          # Stage all workspace modifications natively while excluding clones_output using Git pathspec magic
+          git add --all -- ':(exclude)clones_output'
           if git diff --staged --quiet; then
             echo "No changes to commit on main."
           else
             git commit -m "Auto-update base userstyles"
-            git pull --rebase origin main
+            git pull --rebase --autostash origin main
             git push origin main
           fi
 
       - name: Push clones to site-clones branch
         run: |
+          # Stop execution early if the clones directory is missing or empty
           if [ ! -d "clones_output" ] || [ -z "$(ls -A clones_output)" ]; then
             echo "No clones to push."
             exit 0
           fi
 
+          # -- p: removes everything from the branch, except .git, to preserve the git history
+          # Back up clones to /tmp to shield them from the upcoming workspace wipe
           cp -r clones_output /tmp/clones_output_backup
+          # Remove the local directory to avoid checkout conflicts
+          rm -rf clones_output
 
+          # Check if the site-clones branch already exists on the remote
           if git ls-remote --exit-code --heads origin site-clones; then
             git fetch origin site-clones
             git checkout -B site-clones origin/site-clones
           else
+            # Initialize a completely empty orphan branch if it's the first run
             git checkout --orphan site-clones
             git rm -rf .
           fi
 
+          # Wipe all working directory files except .git to ensure stale/deleted files are purged
           find . -maxdepth 1 ! -name '.' ! -name '.git' -exec rm -rf {} +
+          
+          # Move the backed-up clones back into the now-sanitized workspace root
           cp -r /tmp/clones_output_backup/* .
           rm -rf /tmp/clones_output_backup
 
