@@ -1,5 +1,5 @@
 /* ==UserStyle==
-@name           DeAnnoy rferl - Radio Free Europe, Radio Liberty [papo] clone 3
+@name           DeAnnoy rferl - Radio Free Europe, Radio Liberty [papo] clone 3
 @namespace      github.com/paponius/userstyles
 @version        1.1.1
 @description    Updated: 2025-01. Notes and feedback: https://github.com/paponius/userstyles/. Unstick the header. Expand main article, hide More News endless stream. Check what it does in style Options, or read @var descriptions on top of the code.
@@ -22,7 +22,7 @@
 /* This preprocesor header and global variables are common part used in many of my styles. Version: 1.1.1 24-03 */
 @-moz-document domain("rferl.org"), domain("radiosvoboda.org"), domain("svoboda.org"), domain("europalibera.org"), domain("currenttime.tv") {
 
-/* disabled. it also targets loaded mid-article videos */
+/* disabled. As it also targets loaded mid-article videos */
 /* .c-sticky-element--initialised[data-sp_api="pangea-video"]:has(.c-mmp__poster--video):not(:has(.c-mmp__poster--video[style="display: none;"]))::before {
 	content: 'The video player did not load. Probably need to unlock some JS.';
 	display: block;
