@@ -9,9 +9,12 @@ userstyles:
   - name: "DeAnnoy rferl - Radio Free Europe, Radio Liberty"
     url: "https://userstyles.world/api/style/15811.user.css"
     clones: 5
+  - name: "Anti scam and clean Torrent sites"
+    url: "https://userstyles.world/api/style/15934.user.css"
+    clones: 0
   - name: "Dark Denik N"
     url: "https://userstyles.world/api/style/30846.user.css"
-    clones: 2
+    clones: 1
   - name: "DeAnnoy Denik N"
     url: "https://userstyles.world/api/style/30847.user.css"
     clones: 1
