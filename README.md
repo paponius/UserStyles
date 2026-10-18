@@ -20,18 +20,27 @@ All styles in this collection share a consistent visual design and standard opti
 
 ## Quick Links
 
-* 📖 **[Installation Guide](https://github.com/paponius/UserStyles/wiki/Installing-UserStyles)** – How to install and set up these styles.
-* ⚙️ **[Customization & Presets](https://github.com/paponius/UserStyles/wiki/Dark-Options)** – Learn how to customize options and use built-in presets.
-* 🔄 **[Site Clones Architecture](https://www.google.com/search?q=https://github.com/paponius/UserStyles/tree/site-clones)** – Technical details on how multi-site clones are automatically generated and synchronized across USw.
+- 📖 **[Installation Guide](https://github.com/paponius/UserStyles/wiki/Installing-UserStyles)** – How to install and set up these styles.
+- ⚙️ **[Dark Styles Customization & Presets](https://github.com/paponius/UserStyles/wiki/Dark-UserStyle-Options)** – Learn how to customize theme options and use built-in presets.
+- ⚙️ **[DeAnnoy Styles Options & Features](https://github.com/paponius/UserStyles/wiki/DeAnnoy-Options-&-Features)** – Explore layout toggles, unsticking headers, and decluttering options.
+- 🌐 **[Notes for Specific Sites](https://github.com/paponius/UserStyles/wiki/Notes-for-some-specific-sites)** – Site-specific settings, design philosophies, and recommendations (e.g., Wikipedia).
+- 💬 **[Support & Collaboration](https://github.com/paponius/UserStyles/wiki/Support,-issues,-bugs,-collaboration)** – Bug reporting, repository workflow, and CSS rules for contributors.
 
 ---
 
 ## Visual Themes & Presets
 
-*Dark* UserStyles can be customized or switched via presets to fit your preference:  
-<img src="https://github.com/user-attachments/assets/10f476c8-2309-412d-b7ad-7839236d69e4" width="33%">
-<img src="https://github.com/user-attachments/assets/947b507b-6e26-4ede-893c-690a5676dfa6" width="33%">
-<img src="https://github.com/user-attachments/assets/fd1d7a0e-3dd1-4868-9b59-dd88100301f7" width="33%">
+Standard web layouts with stark black text on bright white backgrounds often present different reading challenges depending on your needs. *Dark* UserStyles feature built-in presets tailored to address three core reading use-cases:
+
+1. **High Brightness & Eye Strain:** For readers whose eyes hurt from excessively bright screens, softer background tones and balanced contrast eliminate glare.
+2. **Cluttered & Inconsistent Layouts:** For readers seeking a clean, visually unified interface across different sites, elements are styled consistently for a structured look.
+3. **Focus & Reading Fatigue:** For readers who find stark, highly reactive pages hypnotizing or hard to focus on, textured patterns and calculated text hierarchy help anchor your eyes to maintain effortless tracking during long reading sessions.
+
+<div style="display: flex; gap: 8px;">
+  <img src="https://github.com/user-attachments/assets/10f476c8-2309-412d-b7ad-7839236d69e4" width="32%">
+  <img src="https://github.com/user-attachments/assets/947b507b-6e26-4ede-893c-690a5676dfa6" width="32%">
+  <img src="https://github.com/user-attachments/assets/fd1d7a0e-3dd1-4868-9b59-dd88100301f7" width="32%">
+</div>
 
 ---
 
