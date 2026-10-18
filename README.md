@@ -1,3 +1,17 @@
+> **Note**: It seems that when a UserCSS on USw is "Mirrored", these limits do not apply.
+> There is no problem with duplicate @name. (Also the length limit for name and description is ignored.)
+> That makes this branch and workflow useless. I started to use links directly to main branch for cloned UserCSS.
+> Some are still using links to this branch.
+
+# ⚠️ Automated Branch Notice
+
+> **Note:** The `site-clones` branch is automatically managed and updated daily by GitHub Actions.
+
+- **Generated Content:** The root userstyle files on this branch are generated automatically from primary output templates.
+- **File Deletions:** Any files deleted or renamed in the style generation process are purged from this branch on every workflow run to prevent stale assets.
+- **Manual Edits:** Direct modifications or manual file additions made to this branch will be overwritten or removed during the next automated run.
+
+
 # Why These Clones Exist
 
 UserStyles.world (USw) (https://userstyles.world/) repository restricts each UserStyle to a single domain slug ("Category"), which prevents native multi-site support for independent domains sharing the same layout.
