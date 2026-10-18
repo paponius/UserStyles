@@ -69,8 +69,8 @@ jobs:
             git rm -rf .
           fi
 
-          # Wipe all working directory files except .git to ensure stale/deleted files are purged
-          find . -maxdepth 1 ! -name '.' ! -name '.git' -exec rm -rf {} +
+          # Wipe all working directory files except .git and files in the root directory to ensure stale/deleted files are purged
+          find . -maxdepth 1 ! -name '.' ! -name '.git' -type f -exec rm -rf {} +
           
           # Move the backed-up clones back into the now-sanitized workspace root
           cp -r /tmp/clones_output_backup/* .
