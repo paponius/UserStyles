@@ -1,13 +1,3 @@
-<!-- testing links in md files
-There seems to be no way to open an md page other than the main readme.md in a view without the File tree.
-To avoid reload, when just jumping anchors, use only "#anchor".
-
-[Will reload the page but will open md without File tree and jumps to anchor OK](https://github.com/paponius/userstyles/#stylish-boycott)
-There could be a slash before hash, or not: /userstyles/#stylish-boycott
-[this will reload the md file and show File tree](README.md#stylish-boycott)  
-[without reload](#stylish-boycott)  
- -->
-
 # UserStyles
 
 A collection of **Dark** and **DeAnnoy** UserStyles covering dozens of websites, available on [UserStyles.world (USw)](https://userstyles.world/user/papo).
@@ -20,11 +10,11 @@ All styles in this collection share a consistent visual design and standard opti
 
 ## Quick Links
 
-- 📖 **[Installation Guide](https://github.com/paponius/UserStyles/wiki/Installing-UserStyles)** – How to install and set up these styles.
-- ⚙️ **[Dark Styles Customization & Presets](https://github.com/paponius/UserStyles/wiki/Dark-UserStyle-Options)** – Learn how to customize theme options and use built-in presets.
-- ⚙️ **[DeAnnoy Styles Options & Features](https://github.com/paponius/UserStyles/wiki/DeAnnoy-Options-&-Features)** – Explore layout toggles, unsticking headers, and decluttering options.
-- 🌐 **[Notes for Specific Sites](https://github.com/paponius/UserStyles/wiki/Notes-for-some-specific-sites)** – Site-specific settings, design philosophies, and recommendations (e.g., Wikipedia).
-- 💬 **[Support & Collaboration](https://github.com/paponius/UserStyles/wiki/Support,-issues,-bugs,-collaboration)** – Bug reporting, repository workflow, and CSS rules for contributors.
+- 📖 **[Installation Guide](https://github.com/paponius/UserStyles-papo/wiki/Installing-UserStyles)** – How to install and set up these styles.
+- ⚙️ **[Dark Styles Customization & Presets](https://github.com/paponius/UserStyles-papo/wiki/Dark-UserStyle-Options)** – Learn how to customize theme options and use built-in presets.
+- ⚙️ **[DeAnnoy Styles Options & Features](https://github.com/paponius/UserStyles-papo/wiki/DeAnnoy-Options-&-Features)** – Explore layout toggles, unsticking headers, and decluttering options.
+- 🌐 **[Notes for Specific Sites](https://github.com/paponius/UserStyles-papo/wiki/Notes-for-some-specific-sites)** – Site-specific settings, design philosophies, and recommendations (e.g., Wikipedia).
+- 💬 **[Support & Collaboration](https://github.com/paponius/UserStyles-papo/wiki/Support,-issues,-bugs,-collaboration)** – Bug reporting, repository workflow, and CSS rules for contributors.
 
 ---
 
